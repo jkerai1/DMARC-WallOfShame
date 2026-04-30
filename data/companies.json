@@ -19,4 +19,7 @@
   { "name": "United Nations Refugee Academy", "domain": "unhcr.org" },
   { "name": "UK Parliament", "domain": "parliament.uk" },
   { "name": "NextDNS", "domain": "nextdns.io" },
+  { "name": "IT Glue", "domain": "itglue.com" },
+  { "name": "VLC", "domain": "videolan.org" },
+  { "name": "Spanish Government site", "domain": "gob.es" },
 ]
