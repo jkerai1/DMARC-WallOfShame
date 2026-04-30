@@ -2,7 +2,7 @@ let rawData = [];
 let currentSort = { key: "name", asc: true };
 
 async function loadData() {
-  const res = await fetch("../output/non_dmarc.json");
+  const res = await fetch("non_dmarc.json");
   rawData = await res.json();
 
   updateStats();
