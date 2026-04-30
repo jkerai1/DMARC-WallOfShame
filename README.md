@@ -18,3 +18,7 @@ Add domains to:
 `data/companies.json`
 
 >Smaller players will not be accepted due to the fact it will flood the site. Large companies by Revenue, Employee count, Government or a company that holds signficant PII or is involved in significant infrastructure that if hacked would cause physical destruction or loss of life.
+
+
+> [!NOTE]
+> Even if your domain is not intended to send email it should still have DMARC of p=reject and be parked, for example, v=spf1 -all which permits no IP to send mail. Follow Guidance here: https://www.ncsc.gov.uk/blog-post/protecting-parked-domains
