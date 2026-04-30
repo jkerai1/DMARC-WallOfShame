@@ -22,3 +22,5 @@ Add domains to:
 
 > [!NOTE]
 > Even if your domain is not intended to send email it should still have DMARC of p=reject and be parked, for example, v=spf1 -all which permits no IP to send mail. Follow Guidance here: https://www.ncsc.gov.uk/blog-post/protecting-parked-domains
+> [!NOTE]
+> Also Note if your company uses Entra/Microsoft 365 you still need to DMARC your .onmicrosoft.com domain. https://o365info.com/dkim-dmarc-onmicrosoft-com-domain/. This repo will not include .onmicrosoft.com domains.
