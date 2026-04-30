@@ -3,90 +3,138 @@
     "name": "Skoda",
     "domain": "skoda.co.uk",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:28.144040"
+    "last_checked": "2026-04-30T21:05:44.783623"
   },
   {
     "name": "Jaguar",
     "domain": "jaguar.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:28.169670"
+    "last_checked": "2026-04-30T21:05:44.814886"
   },
   {
     "name": "Hyundai",
     "domain": "hyundai.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:28.352361"
+    "last_checked": "2026-04-30T21:05:45.083904"
   },
   {
     "name": "Citroen",
     "domain": "citroen.co.uk",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:28.483523"
+    "last_checked": "2026-04-30T21:05:45.365770"
   },
   {
     "name": "Asda",
     "domain": "asda.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:28.528559"
+    "last_checked": "2026-04-30T21:05:45.621619"
   },
   {
     "name": "Vauxhall",
     "domain": "vauxhall.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-04-30T20:40:28.836128"
+    "last_checked": "2026-04-30T21:05:45.652394"
   },
   {
     "name": "TicketMaster",
     "domain": "ticketmaster.co.uk",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.025930"
+    "last_checked": "2026-04-30T21:05:45.683836"
   },
   {
     "name": "Github",
     "domain": "github.io",
     "status": "no_dmarc",
-    "last_checked": "2026-04-30T20:40:29.057112"
+    "last_checked": "2026-04-30T21:05:45.701442"
   },
   {
     "name": "Active Quote",
     "domain": "activequote.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.269722"
+    "last_checked": "2026-04-30T21:05:45.942435"
   },
   {
     "name": "Iberia Airlines",
     "domain": "iberiaexpress.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.274432"
+    "last_checked": "2026-04-30T21:05:45.985638"
   },
   {
     "name": "Travel Lodge",
     "domain": "travelodge.co.uk",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.296523"
+    "last_checked": "2026-04-30T21:05:46.022195"
   },
   {
     "name": "Holiday Inn",
     "domain": "ihg.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.303899"
+    "last_checked": "2026-04-30T21:05:46.041379"
   },
   {
     "name": "Premier Inn",
     "domain": "premierinn.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.346684"
+    "last_checked": "2026-04-30T21:05:46.070631"
   },
   {
     "name": "Iceland Air",
     "domain": "icelandair.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.403401"
+    "last_checked": "2026-04-30T21:05:46.137546"
   },
   {
     "name": "Norweigan Air",
     "domain": "norwegian.com",
     "status": "p_none",
-    "last_checked": "2026-04-30T20:40:29.426219"
+    "last_checked": "2026-04-30T21:05:46.280342"
+  },
+  {
+    "name": "United Nations Office For Disarmament Affairs",
+    "domain": "unoda.org",
+    "status": "no_dmarc",
+    "last_checked": "2026-04-30T21:05:46.312377"
+  },
+  {
+    "name": "United Nations Human Rights",
+    "domain": "ohchr.org",
+    "status": "p_none",
+    "last_checked": "2026-04-30T21:05:46.482101"
+  },
+  {
+    "name": "United Nations Refugee Academy",
+    "domain": "unhcr.org",
+    "status": "p_none",
+    "last_checked": "2026-04-30T21:05:46.535857"
+  },
+  {
+    "name": "UK Parliament",
+    "domain": "parliament.uk",
+    "status": "p_none",
+    "last_checked": "2026-04-30T21:05:46.732510"
+  },
+  {
+    "name": "NextDNS",
+    "domain": "nextdns.io",
+    "status": "no_dmarc",
+    "last_checked": "2026-04-30T21:05:46.770104"
+  },
+  {
+    "name": "IT Glue",
+    "domain": "itglue.com",
+    "status": "p_none",
+    "last_checked": "2026-04-30T21:05:46.782996"
+  },
+  {
+    "name": "VLC",
+    "domain": "videolan.org",
+    "status": "p_none",
+    "last_checked": "2026-04-30T21:05:46.923340"
+  },
+  {
+    "name": "Spanish Government site",
+    "domain": "gob.es",
+    "status": "no_dmarc",
+    "last_checked": "2026-04-30T21:05:46.973104"
   }
 ]
