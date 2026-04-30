@@ -13,5 +13,10 @@
   { "name": "Holiday Inn", "domain": "ihg.com" },
   { "name": "Premier Inn", "domain": "premierinn.com" },
   { "name": "Iceland Air", "domain": "icelandair.com" },
-  { "name": "Norweigan Air", "domain": "norwegian.com" }
+  { "name": "Norweigan Air", "domain": "norwegian.com" },
+  { "name": "United Nations Office For Disarmament Affairs", "domain": "unoda.org" },
+  { "name": "United Nations Human Rights", "domain": "ohchr.org" },
+  { "name": "United Nations Refugee Academy", "domain": "unhcr.org" },
+  { "name": "UK Parliament", "domain": "parliament.uk" },
+  { "name": "NextDNS", "domain": "nextdns.io" },
 ]
