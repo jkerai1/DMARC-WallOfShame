@@ -17,7 +17,7 @@ Tracks domains that:
 Add domains to:
 `data/companies.json`
 
->Smaller players will not be accepted due to the fact it will flood the site. Large companies by Revenue, Employee count, Government or a company that holds signficant PII or is involved in significant infrastructure that if hacked would cause physical destruction or loss of life.
+> Smaller players will not be accepted due to the fact it will flood the site. Large companies by Revenue or Employee count, Government Entities, Software with a huge supply chain that could cause an supply chain attack, a company that holds signficant PII or is involved in significant infrastructure that if hacked would cause physical destruction or loss of life.
 
 
 > [!NOTE]
