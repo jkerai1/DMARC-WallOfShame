@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Skoda",
+    "domain": "skoda.co.uk",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:46.453986"
+  },
+  {
+    "name": "Jaguar",
+    "domain": "jaguar.com",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:46.500697"
+  },
+  {
+    "name": "Hyundai",
+    "domain": "hyundai.com",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:46.687441"
+  },
+  {
+    "name": "Citroen",
+    "domain": "citroen.co.uk",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:46.988041"
+  },
+  {
+    "name": "Asda",
+    "domain": "asda.com",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:47.190314"
+  },
+  {
+    "name": "Vauxhall",
+    "domain": "vauxhall.co.uk",
+    "status": "no_dmarc",
+    "last_checked": "2026-04-30T19:48:47.507581"
+  },
+  {
+    "name": "TicketMaster",
+    "domain": "ticketmaster.co.uk",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:47.553844"
+  },
+  {
+    "name": "Github",
+    "domain": "github.io",
+    "status": "no_dmarc",
+    "last_checked": "2026-04-30T19:48:47.565452"
+  },
+  {
+    "name": "Active Quote",
+    "domain": "activequote.com",
+    "status": "p_none",
+    "last_checked": "2026-04-30T19:48:47.769221"
+  }
+]
