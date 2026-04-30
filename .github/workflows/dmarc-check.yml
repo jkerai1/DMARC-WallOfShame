@@ -10,22 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install dnspython
 
-      - run: python scripts/check_dmarc.py
+      - name: Run DMARC check
+        run: python scripts/check_dmarc.py
 
-      - name: Commit changes
+      - name: Show generated files (debug)
+        run: ls -R public || true
+
+      - name: Commit updated output
         run: |
-          git diff --quiet || (
-            git config user.name "github-actions"
-            git config user.email "actions@github.com"
-            git add output/non_dmarc.json
-            git commit -m "Update DMARC status"
-            git push
-          )
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add public/non_dmarc.json
+
+          git diff --cached --quiet || git commit -m "Update DMARC status"
+
+          git push
