@@ -9,7 +9,7 @@ Tracks domains that:
 ## How it works
 
 - Daily GitHub Action checks domains. If the company remediates then they get cleared down.
-- Updates `output/non_dmarc.json`
+- Updates `docs/non_dmarc.json`
 - GitHub Pages displays results
 
 ## Contributing
