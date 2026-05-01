@@ -6,13 +6,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="subtitle">
+  <p>
+    Domains listed here lack proper enforcement (no DMARC policy or set to <code>p=none</code>).
+    While <code>p=none</code> can be used temporarily for monitoring, it should not be a permanent configuration.
+  </p>
 
-  <h1>DMARC Watch</h1>
-  <p class="subtitle">Domains without enforcement (no DMARC or p=none) [See Readme for Criteria]</p>
-  <p class="subtitle">Even if your domain is not intended to send email it should still have DMARC of p=reject and be parked, for example, v=spf1 -all which permits no IP to send mail. Follow Guidance here: https://www.ncsc.gov.uk/blog-post/protecting-parked-domains</p>
-  <p class="subtitle">Note: Companies or Entites Listed here may have DMARC on other domains.</p>
-  <p class="subtitle">Also Note if your company use Entra/Microsoft 365 you still need to DMARC your .onmicrosoft.com domain. https://o365info.com/dkim-dmarc-onmicrosoft-com-domain/. This list will not include .onmicrosoft.com domains.</p>
-  <p class="subtitle">Contribute: https://github.com/jkerai1/DMARC-WallOfShame</p>
+  <p>
+    Even domains that do not send email should implement DMARC with a policy of <code>p=reject</code> and be properly parked.
+    For example, use <code>v=spf1 -all</code> to ensure no IP address is authorized to send email.
+    Follow official guidance:
+    <a href="https://www.ncsc.gov.uk/blog-post/protecting-parked-domains" target="_blank" rel="noopener noreferrer">
+      Protecting parked domains (NCSC)
+    </a>.
+  </p>
+
+  <p>
+    <strong>Note:</strong> Companies or entities listed here may have valid DMARC policies on other domains.
+  </p>
+
+  <p>
+    <strong>Additional note:</strong> If your organization uses Microsoft Entra / Microsoft 365,
+    you should also configure DMARC for your <code>.onmicrosoft.com</code> domain.
+    Learn more:
+    <a href="https://o365info.com/dkim-dmarc-onmicrosoft-com-domain/" target="_blank" rel="noopener noreferrer">
+      DKIM & DMARC for onmicrosoft.com domains
+    </a>.
+    This list does not include <code>.onmicrosoft.com</code> domains.
+  </p>
+
+  <p>
+    Contribute to this project:
+    <a href="https://github.com/jkerai1/DMARC-WallOfShame" target="_blank" rel="noopener noreferrer">
+      DMARC Wall of Shame (GitHub)
+    </a>
+  </p>
+</div>
   <div class="controls">
     <input type="text" id="search" placeholder="Search company or domain..." />
 
