@@ -203,5 +203,6 @@
   { "name": "Panasonic", "domain": "panasonic.com" },
   { "name": "Windows Update", "domain": "windowsupdate.com" },
   { "name": "Chromium", "domain": "chromium.org" },
-  { "name": "Korea University", "domain": "korea.ac.kr" }
+  { "name": "Korea University", "domain": "korea.ac.kr" },
+  { "name": "Packethub", "domain": "packethub.net" }
 ]
