@@ -102,5 +102,6 @@
   { "name": "Unix", "domain": "unix.org" },
   { "name": "Sublime Text", "domain": "sublimetext.com" },
   { "name": "Atom IDE", "domain": "atom-editor.cc" },
-  { "name": "Spyder IDE", "domain": "spyder-ide.org" }
+  { "name": "Spyder IDE", "domain": "spyder-ide.org" },
+  { "name": "Chartered Institute of Payroll Professionals", "domain": "cipp.org.uk" }
 ]
