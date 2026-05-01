@@ -125,5 +125,10 @@
   { "name": "Denon", "domain": "denon.co.uk" },
   { "name": "MSP Glass", "domain": "mspglass.app" },
   { "name": "Dreamhost", "domain": "dreamhost.com" },
-  { "name": "Bandcamp", "domain": "bandcamp.com" }
+  { "name": "Bandcamp", "domain": "bandcamp.com" },
+  { "name": "Yandex", "domain": "yandex.com" },
+  { "name": "Olay", "domain": "olay.com" },
+  { "name": "IME London", "domain": "imelondon.co.uk" },
+  { "name": "ESPN", "domain": "espn.co.uk" },
+  { "name": "Trivago", "domain": "trivago.co.uk" }
 ]
