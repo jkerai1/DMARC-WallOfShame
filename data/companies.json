@@ -67,5 +67,9 @@
   { "name": "Yamaha", "domain": "yamaha-racing.com" },
   { "name": "Scan Titan", "domain": "scantitan.com" },
   { "name": "Mitre", "domain": "mitre.org" },
-  { "name": "Python", "domain": "python.org" }
+  { "name": "Python", "domain": "python.org" }.
+  { "name": "Rust", "domain": "rust-lang.org" },
+  { "name": "Go (programming language)", "domain": "Go.dev" },
+  { "name": "Waze", "domain": "waze.com" },
+  { "name": "Moondrop", "domain": "moondroplab.com" }
 ]
