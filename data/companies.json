@@ -7,6 +7,7 @@
   { "name": "Vauxhall", "domain": "vauxhall.co.uk" },
   { "name": "TicketMaster", "domain": "ticketmaster.co.uk" },
   { "name": "Github", "domain": "github.io" },
+  { "name": "Github", "domain": "github.dev" },
   { "name": "Active Quote", "domain": "activequote.com" },
   { "name": "Iberia Airlines", "domain": "iberiaexpress.com" },
   { "name": "Travel Lodge", "domain": "travelodge.co.uk" },
@@ -189,5 +190,18 @@
   { "name": "Fitbit", "domain": "fitbit.com" },
   { "name": "Postgres", "domain": "postgresql.org" },
   { "name": "Up4Ever", "domain": "up-4ever.net" },
-  { "name": "Argentina Gov", "domain": "gob.ar" }
+  { "name": "Argentina Gov", "domain": "gob.ar" },
+  { "name": "CBS News", "domain": "cbsnews.com" },
+  { "name": "Matplotlib", "domain": "matplotlib.org" },
+  { "name": "CentOS", "domain": "centos.org" },
+  { "name": "National Geographic", "domain": "nationalgeographic.com" },
+  { "name": "How Long To beat", "domain": "howlongtobeat.com" },
+  { "name": "Patagonia", "domain": "patagonia.com" },
+  { "name": "Driver Pack", "domain": "driverpack.io" },
+  { "name": "Tensor Flow", "domain": "tensorflow.org" },
+  { "name": "The Windows Club", "domain": "thewindowsclub.com" },
+  { "name": "Panasonic", "domain": "panasonic.com" },
+  { "name": "Windows Update", "domain": "windowsupdate.com" },
+  { "name": "Chromium", "domain": "chromium.org" },
+  { "name": "Korea University", "domain": "korea.ac.kr" }
 ]
