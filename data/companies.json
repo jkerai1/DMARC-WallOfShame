@@ -28,5 +28,17 @@
   { "name": "Kia", "domain": "kia.com" },
   { "name": "MG", "domain": "mg.co.uk" },
   { "name": "Peugeot", "domain": "peugeot.co.uk" },
-  { "name": "Nissan", "domain": "nissan.co.uk" }
+  { "name": "Nissan", "domain": "nissan.co.uk" },
+  { "name": "Notepad++", "domain": "notepad-plus-plus.org" },
+  { "name": "Internet Archive - Wayback Machine", "domain": "archive.org" },
+  { "name": "Webroot", "domain": "webroot.com" },
+  { "name": "KeePass", "domain": "keepass.info" },
+  { "name": "International Distribution Services", "domain": "internationaldistributionservices.com" },
+  { "name": "Yamaha", "domain": "yamaha-motor.eu" },
+  { "name": "Yamaha", "domain": "yamaha-motor.com" },
+  { "name": "Yamaha", "domain": "yamahamusiclondon.com" },
+  { "name": "Yamaha", "domain": "yamaha-racing.com" },
+  { "name": "Scan Titan", "domain": "scantitan.com" },
+  { "name": "Mitre", "domain": "mitre.org" },
+  { "name": "Python", "domain": "python.org" }
 ]
