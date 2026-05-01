@@ -124,5 +124,6 @@
   { "name": "Canon", "domain": "canon.co.uk" },
   { "name": "Denon", "domain": "denon.co.uk" },
   { "name": "MSP Glass", "domain": "mspglass.app" },
-  { "name": "Dreamhost", "domain": "dreamhost.com" }
+  { "name": "Dreamhost", "domain": "dreamhost.com" },
+  { "name": "Bandcamp", "domain": "bandcamp.com" }
 ]
