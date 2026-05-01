@@ -122,5 +122,7 @@
   { "name": "OVH cloud", "domain": "ovhcloud.com" },
   { "name": "Audeze", "domain": "audeze.com" },
   { "name": "Canon", "domain": "canon.co.uk" },
-  { "name": "Denon", "domain": "denon.co.uk" }
+  { "name": "Denon", "domain": "denon.co.uk" },
+  { "name": "MSP Glass", "domain": "mspglass.app" },
+  { "name": "Dreamhost", "domain": "dreamhost.com" }
 ]
