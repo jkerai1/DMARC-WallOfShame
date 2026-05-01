@@ -106,5 +106,21 @@
   { "name": "Chartered Institute of Payroll Professionals", "domain": "cipp.org.uk" },
   { "name": "You Porn", "domain": "youporn.com" },
   { "name": "Pornhub", "domain": "pornhub.com" },
-  { "name": "Foobar", "domain": "foobar2000.org" }
+  { "name": "Foobar", "domain": "foobar2000.org" },
+  { "name": "TridentUK", "domain": "tridentuk.com" },
+  { "name": "Shodan", "domain": "shodan.io" },
+  { "name": "Schitt", "domain": "schiit.co.uk" },
+  { "name": "Schitt", "domain": "schiit.com" },
+  { "name": "Hifiman", "domain": "hifiman.com" },
+  { "name": "Open Source Org", "domain": "opensource.org" },
+  { "name": "Mcdonalds", "domain": "mcdonalds.com" },
+  { "name": "Popeyes UK", "domain": "popeyesuk.com" },
+  { "name": "CSS Validator", "domain": "css-validator.org" },
+  { "name": "Band Aid", "domain": "band-aid.com" },
+  { "name": "Bayer", "domain": "bayer.co.uk" },
+  { "name": "Angular", "domain": "angular.dev" },
+  { "name": "OVH cloud", "domain": "ovhcloud.com" },
+  { "name": "Audeze", "domain": "audeze.com" },
+  { "name": "Canon", "domain": "canon.co.uk" },
+  { "name": "Denon", "domain": "denon.co.uk" }
 ]
