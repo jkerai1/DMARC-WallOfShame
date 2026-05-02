@@ -1,0 +1,64 @@
+name: "🚨 DMARC Issue Submission"
+description: "Report a domain with a missing, weak, or misconfigured DMARC record."
+title: "[DMARC] <domain.com>"
+labels: ["dmarc-submission", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the DMARC Wall of Shame! Please fill in as much detail as possible.
+        Before submitting, verify the DMARC record yourself using a tool such as [MXToolbox](https://mxtoolbox.com/dmarc.aspx) or [dmarcian](https://dmarcian.com/dmarc-inspector) or [JayQuery](https://github.com/LukeSteward/JayQuery).
+
+  - type: input
+    id: org_name
+    attributes:
+      label: "Organisation Name"
+      description: "What is the name of the organisation"
+      placeholder: "ACME Corp"
+    validations:
+      required: true
+
+  - type: input
+    id: domain
+    attributes:
+      label: "Domain"
+      description: "The domain with the missing or weak DMARC record."
+      placeholder: "example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: "Issue Type"
+      description: "What kind of DMARC problem does this domain have?"
+      options:
+        - "No DMARC record (missing)"
+        - "DMARC policy set to 'none' (p=none)"
+        - "Malformed / invalid DMARC record"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dmarc_record
+    attributes:
+      label: "Current DMARC Record (if any)"
+      description: "Paste the raw TXT record from `_dmarc.<domain>` — leave blank if none exists."
+      placeholder: "v=DMARC1; p=none; rua=mailto:dmarc@example.com"
+
+  - type: input
+    id: lookup_url
+    attributes:
+      label: "Verification Link"
+      description: "Link to a DMARC lookup tool showing the issue (optional but helpful)."
+      placeholder: "https://mxtoolbox.com/SuperTool.aspx?action=dmarc%3Aexample.com"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Submission Checklist"
+      options:
+        - label: "I have verified this domain has a DMARC issue using an external tool."
+          required: true
+        - label: "This is not a test/example domain (e.g. not example.com)."
+          required: true
