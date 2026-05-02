@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "🔍 Check a DMARC Record"
+    url: https://mxtoolbox.com/dmarc.aspx
+    about: "Verify a domain's DMARC record before submitting."
+  - name: "📖 What is DMARC?"
+    url: https://dmarc.org/overview/
+    about: "Learn more about DMARC and why it matters."
+   - name: "Want to proactively check websites?"
+    url: https://github.com/LukeSteward/JayQuery
+    about: "Download JayQuery to start proactively checking companies that you work with"
