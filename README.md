@@ -17,7 +17,7 @@ Tracks domains that:
 Add domains to:
 `data/companies.json`
 
-> Smaller players will not be accepted due to the fact it will flood the site. Large companies by Revenue (or Employee/Customer count), Government Entities, Software with a huge supply chain that could cause an supply chain attack,an Alexa top 1M domain, IT/security companies that should know better, a company that holds signficant PII or is involved in significant infrastructure that if hacked would cause physical destruction or loss of life.
+> Smaller players will not be accepted due to the fact it will flood the site. Large companies by Revenue (or Employee/Customer count), Government Entities, Software with a huge supply chain that could cause an supply chain attack,an Alexa top 1M domain (or equivalent ranking), IT/security companies that should know better, a company that holds signficant PII or is involved in significant infrastructure that if hacked would cause physical destruction or loss of life.
 
 
 > [!NOTE]
