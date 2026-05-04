@@ -269,5 +269,15 @@
   {"name": "Drupal", "domain": "drupal.org" },
   {"name": "Intel", "domain": "intel.co.uk" },
   {"name": "Intel", "domain": "intel.com" },
-  {"name": "Bosnian Government", "domain": "gov.ba" }
+  {"name": "Bosnian Government", "domain": "gov.ba" },
+  {"name": "Django", "domain": "djangoproject.com" },
+  {"name": "Yorkshire Tea", "domain": "yorkshiretea.co.uk" },
+  {"name": "Ralph Lauren", "domain": "ralphlauren.co.uk" },
+  {"name": "Armani", "domain": "armani.com" },
+  {"name": "Kenwood", "domain": "kenwoodworld.com" },
+  {"name": "LibreOffice", "domain": "libreoffice.org" },
+  {"name": "Exagenica", "domain": "exagenica.com" },
+  {"name": "Shell", "domain": "shell.co.uk" },
+  {"name": "Dice", "domain": "dicefm.com" },
+  {"name": "PartyPoker", "domain": "partypoker.com" }
 ]
