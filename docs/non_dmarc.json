@@ -3,1698 +3,1734 @@
     "name": "Skoda",
     "domain": "skoda.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:18.202140"
+    "last_checked": "2026-05-04T19:31:26.000199"
   },
   {
     "name": "Jaguar",
     "domain": "jaguar.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:18.283252"
+    "last_checked": "2026-05-04T19:31:26.029489"
   },
   {
     "name": "Hyundai",
     "domain": "hyundai.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:18.549194"
+    "last_checked": "2026-05-04T19:31:26.199239"
   },
   {
     "name": "Citroen",
     "domain": "citroen.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:18.778222"
+    "last_checked": "2026-05-04T19:31:26.336506"
   },
   {
     "name": "Asda",
     "domain": "asda.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:18.979645"
+    "last_checked": "2026-05-04T19:31:26.411352"
   },
   {
     "name": "Vauxhall",
     "domain": "vauxhall.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:19.200448"
+    "last_checked": "2026-05-04T19:31:26.563019"
   },
   {
     "name": "TicketMaster",
     "domain": "ticketmaster.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.206087"
+    "last_checked": "2026-05-04T19:31:26.725904"
   },
   {
     "name": "Github",
     "domain": "github.io",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:19.210507"
+    "last_checked": "2026-05-04T19:31:26.743217"
   },
   {
     "name": "Github",
     "domain": "github.dev",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:19.224586"
+    "last_checked": "2026-05-04T19:31:26.763342"
   },
   {
     "name": "Github",
     "domain": "github.blog",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:19.263396"
+    "last_checked": "2026-05-04T19:31:26.810621"
   },
   {
     "name": "Github (Atom)",
     "domain": "atom.io",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:19.289070"
+    "last_checked": "2026-05-04T19:31:26.841734"
   },
   {
     "name": "Active Quote",
     "domain": "activequote.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.405845"
+    "last_checked": "2026-05-04T19:31:27.071228"
   },
   {
     "name": "Iberia Airlines",
     "domain": "iberiaexpress.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.443097"
+    "last_checked": "2026-05-04T19:31:27.104016"
   },
   {
     "name": "Travel Lodge",
     "domain": "travelodge.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.562597"
+    "last_checked": "2026-05-04T19:31:27.130568"
   },
   {
     "name": "Holiday Inn",
     "domain": "ihg.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.569566"
+    "last_checked": "2026-05-04T19:31:27.145574"
   },
   {
     "name": "Premier Inn",
     "domain": "premierinn.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.585065"
+    "last_checked": "2026-05-04T19:31:27.190689"
   },
   {
     "name": "Iceland Air",
     "domain": "icelandair.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.673390"
+    "last_checked": "2026-05-04T19:31:27.320350"
   },
   {
     "name": "Norweigan Air",
     "domain": "norwegian.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:19.758597"
+    "last_checked": "2026-05-04T19:31:27.367501"
   },
   {
     "name": "United Nations Office For Disarmament Affairs",
     "domain": "unoda.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:19.948091"
+    "last_checked": "2026-05-04T19:31:27.433414"
   },
   {
     "name": "United Nations Human Rights",
     "domain": "ohchr.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:20.367705"
+    "last_checked": "2026-05-04T19:31:27.506762"
   },
   {
     "name": "United Nations Refugee Academy",
     "domain": "unhcr.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:20.593517"
+    "last_checked": "2026-05-04T19:31:27.538797"
   },
   {
     "name": "UK Parliament",
     "domain": "parliament.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:20.821450"
+    "last_checked": "2026-05-04T19:31:27.566397"
   },
   {
     "name": "NextDNS",
     "domain": "nextdns.io",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:20.855069"
+    "last_checked": "2026-05-04T19:31:27.587265"
   },
   {
     "name": "IT Glue",
     "domain": "itglue.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:20.946471"
+    "last_checked": "2026-05-04T19:31:27.629870"
   },
   {
     "name": "VLC",
     "domain": "videolan.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:21.035607"
+    "last_checked": "2026-05-04T19:31:27.760411"
   },
   {
     "name": "Spanish Government site",
     "domain": "gob.es",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:21.056758"
+    "last_checked": "2026-05-04T19:31:27.799083"
   },
   {
     "name": "Youtube co.uk",
     "domain": "youtube.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:21.089405"
+    "last_checked": "2026-05-04T19:31:27.848112"
   },
   {
     "name": "7 Zip",
     "domain": "7-zip.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:21.203460"
+    "last_checked": "2026-05-04T19:31:28.020590"
   },
   {
     "name": "Honda",
     "domain": "honda.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:21.333539"
+    "last_checked": "2026-05-04T19:31:28.058024"
   },
   {
     "name": "Kia",
     "domain": "kia.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:21.523613"
+    "last_checked": "2026-05-04T19:31:28.235117"
   },
   {
     "name": "MG",
     "domain": "mg.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:21.899251"
+    "last_checked": "2026-05-04T19:31:28.381328"
   },
   {
     "name": "Peugeot",
     "domain": "peugeot.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.118473"
+    "last_checked": "2026-05-04T19:31:28.648614"
   },
   {
     "name": "Nissan",
     "domain": "nissan.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.133921"
+    "last_checked": "2026-05-04T19:31:28.678371"
   },
   {
     "name": "AstraZeneca",
     "domain": "astrazeneca.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.141374"
+    "last_checked": "2026-05-04T19:31:28.696428"
   },
   {
     "name": "Antofagasta",
     "domain": "antofagasta.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:22.159194"
+    "last_checked": "2026-05-04T19:31:28.729228"
   },
   {
     "name": "Alliance Witan",
     "domain": "alliancewitan.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.329425"
+    "last_checked": "2026-05-04T19:31:29.074465"
   },
   {
     "name": "British Land",
     "domain": "britishland.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.367834"
+    "last_checked": "2026-05-04T19:31:29.109158"
   },
   {
     "name": "Burberry",
     "domain": "burberryplc.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:22.405616"
+    "last_checked": "2026-05-04T19:31:29.138778"
   },
   {
     "name": "Coca-Cola Europacific Partners",
     "domain": "cocacolaep.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:22.529262"
+    "last_checked": "2026-05-04T19:31:29.239989"
   },
   {
     "name": "Entain",
     "domain": "entaingroup.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:22.585402"
+    "last_checked": "2026-05-04T19:31:29.314584"
   },
   {
     "name": "F&C Investment Trust",
     "domain": "fandc.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.672820"
+    "last_checked": "2026-05-04T19:31:29.440332"
   },
   {
     "name": "Games Workshop",
     "domain": "games-workshop.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:22.713823"
+    "last_checked": "2026-05-04T19:31:29.563173"
   },
   {
     "name": "Warhammer",
     "domain": "warhammer.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.794834"
+    "last_checked": "2026-05-04T19:31:29.590141"
   },
   {
     "name": "Hiscox",
     "domain": "hiscoxgroup.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:22.888322"
+    "last_checked": "2026-05-04T19:31:29.711413"
   },
   {
     "name": "Diploma",
     "domain": "diplomaplc.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:22.991681"
+    "last_checked": "2026-05-04T19:31:29.858403"
   },
   {
     "name": "IHG Hotels & Resorts (Holiday Inn)",
     "domain": "ihgplc.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:23.065264"
+    "last_checked": "2026-05-04T19:31:29.997433"
   },
   {
     "name": "Imperial Brands",
     "domain": "imperialbrandsplc.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.280337"
+    "last_checked": "2026-05-04T19:31:30.138371"
   },
   {
     "name": "Lion Finance Group",
     "domain": "lionfinancegroup.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:23.406595"
+    "last_checked": "2026-05-04T19:31:30.178046"
   },
   {
     "name": "JD Sports",
     "domain": "jdplc.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.439214"
+    "last_checked": "2026-05-04T19:31:30.453754"
   },
   {
     "name": "Endeavour Mining",
     "domain": "endeavourmining.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.472967"
+    "last_checked": "2026-05-04T19:31:30.631148"
   },
   {
     "name": "Melrose Industries",
     "domain": "melroseplc.net",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.509483"
+    "last_checked": "2026-05-04T19:31:30.658432"
   },
   {
     "name": "Pershing Square Holdings",
     "domain": "pershingsquareholdings.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.518642"
+    "last_checked": "2026-05-04T19:31:30.719511"
   },
   {
     "name": "Persimmon",
     "domain": "persimmonhomes.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.551802"
+    "last_checked": "2026-05-04T19:31:30.777173"
   },
   {
     "name": "Reckitt",
     "domain": "reckitt.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.599051"
+    "last_checked": "2026-05-04T19:31:31.052947"
   },
   {
     "name": "Sage Group",
     "domain": "sage.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.605717"
+    "last_checked": "2026-05-04T19:31:31.071606"
   },
   {
     "name": "Scottish Mortgage Investment Trust",
     "domain": "scottishmortgage.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:23.709562"
+    "last_checked": "2026-05-04T19:31:31.130362"
   },
   {
     "name": "Smith & Nephew",
     "domain": "smith-nephew.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.713655"
+    "last_checked": "2026-05-04T19:31:31.146828"
   },
   {
     "name": "United Utilities",
     "domain": "unitedutilities.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.806444"
+    "last_checked": "2026-05-04T19:31:31.310310"
   },
   {
     "name": "Tritax Big Box REIT",
     "domain": "tritaxbigbox.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:23.816935"
+    "last_checked": "2026-05-04T19:31:31.352836"
   },
   {
     "name": "Weir Group",
     "domain": "global.weir",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:23.850775"
+    "last_checked": "2026-05-04T19:31:31.632830"
   },
   {
     "name": "Notepad++",
     "domain": "notepad-plus-plus.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:24.277027"
+    "last_checked": "2026-05-04T19:31:32.218215"
   },
   {
     "name": "Internet Archive - Wayback Machine",
     "domain": "archive.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:24.351870"
+    "last_checked": "2026-05-04T19:31:32.278437"
   },
   {
     "name": "Webroot",
     "domain": "webroot.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:24.690540"
+    "last_checked": "2026-05-04T19:31:32.453330"
   },
   {
     "name": "KeePass",
     "domain": "keepass.info",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:24.854696"
+    "last_checked": "2026-05-04T19:31:32.651997"
   },
   {
     "name": "International Distribution Services",
     "domain": "internationaldistributionservices.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:24.952113"
+    "last_checked": "2026-05-04T19:31:33.121967"
   },
   {
     "name": "Yamaha",
     "domain": "yamaha-motor.eu",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:24.991798"
+    "last_checked": "2026-05-04T19:31:33.169175"
   },
   {
     "name": "Yamaha",
     "domain": "yamaha-motor.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.067477"
+    "last_checked": "2026-05-04T19:31:33.420408"
   },
   {
     "name": "Yamaha",
     "domain": "yamahamusiclondon.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:25.230923"
+    "last_checked": "2026-05-04T19:31:33.565172"
   },
   {
     "name": "Yamaha",
     "domain": "yamaha-racing.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:25.327810"
+    "last_checked": "2026-05-04T19:31:33.633760"
   },
   {
     "name": "Scan Titan",
     "domain": "scantitan.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:25.371365"
+    "last_checked": "2026-05-04T19:31:33.694632"
   },
   {
     "name": "Mitre",
     "domain": "mitre.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.409009"
+    "last_checked": "2026-05-04T19:31:33.889750"
   },
   {
     "name": "Python",
     "domain": "python.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.480279"
+    "last_checked": "2026-05-04T19:31:33.945025"
   },
   {
     "name": "Rust",
     "domain": "rust-lang.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.511266"
+    "last_checked": "2026-05-04T19:31:33.982068"
   },
   {
     "name": "Go (programming language)",
     "domain": "Go.dev",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:25.571679"
+    "last_checked": "2026-05-04T19:31:34.023444"
   },
   {
     "name": "Waze",
     "domain": "waze.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.624983"
+    "last_checked": "2026-05-04T19:31:34.059030"
   },
   {
     "name": "Moondrop",
     "domain": "moondroplab.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.711622"
+    "last_checked": "2026-05-04T19:31:34.120185"
   },
   {
     "name": "Sopra Steria",
     "domain": "soprasteria.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:25.751027"
+    "last_checked": "2026-05-04T19:31:34.138920"
   },
   {
     "name": "Mandiant",
     "domain": "mandiant.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:25.765700"
+    "last_checked": "2026-05-04T19:31:34.175783"
   },
   {
     "name": "NTT Data",
     "domain": "nttdata.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:26.198049"
+    "last_checked": "2026-05-04T19:31:34.314003"
   },
   {
     "name": "InfoSec Magazine",
     "domain": "infosecurity-magazine.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:26.267066"
+    "last_checked": "2026-05-04T19:31:34.480031"
   },
   {
     "name": "Qobuz",
     "domain": "qobuz.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:26.351597"
+    "last_checked": "2026-05-04T19:31:34.508881"
   },
   {
     "name": "Calvin Klein",
     "domain": "calvinklein.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:26.380367"
+    "last_checked": "2026-05-04T19:31:34.564531"
   },
   {
     "name": "Blackhat",
     "domain": "blackhat.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:26.461735"
+    "last_checked": "2026-05-04T19:31:34.692824"
   },
   {
     "name": "LG",
     "domain": "lg.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:27.012583"
+    "last_checked": "2026-05-04T19:31:34.850249"
   },
   {
     "name": "Samsung",
     "domain": "samsung.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:27.217236"
+    "last_checked": "2026-05-04T19:31:35.014035"
   },
   {
     "name": "Box",
     "domain": "box.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:27.348865"
+    "last_checked": "2026-05-04T19:31:35.048050"
   },
   {
     "name": "Xiaomi",
     "domain": "mi.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:27.441740"
+    "last_checked": "2026-05-04T19:31:35.205312"
   },
   {
     "name": "ID net",
     "domain": "idnet.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:27.631604"
+    "last_checked": "2026-05-04T19:31:35.510015"
   },
   {
     "name": "Hyperoptic",
     "domain": "hyperoptic.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:27.668941"
+    "last_checked": "2026-05-04T19:31:35.558295"
   },
   {
     "name": "Open Rights Group",
     "domain": "openrightsgroup.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.008355"
+    "last_checked": "2026-05-04T19:31:35.818828"
   },
   {
     "name": "Only Domains",
     "domain": "onlydomains.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.015814"
+    "last_checked": "2026-05-04T19:31:35.852781"
   },
   {
     "name": "Unlimited Web Hosting",
     "domain": "unlimitedwebhosting.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.138004"
+    "last_checked": "2026-05-04T19:31:35.880447"
   },
   {
     "name": "Debian",
     "domain": "debian.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.142710"
+    "last_checked": "2026-05-04T19:31:35.902589"
   },
   {
     "name": "Linux Foundation",
     "domain": "linuxfoundation.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.331404"
+    "last_checked": "2026-05-04T19:31:35.973440"
   },
   {
     "name": "Kali",
     "domain": "kali.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.498075"
+    "last_checked": "2026-05-04T19:31:36.006731"
   },
   {
     "name": "KDE",
     "domain": "kde.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:28.501807"
+    "last_checked": "2026-05-04T19:31:36.038333"
   },
   {
     "name": "GNU",
     "domain": "gnu.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.519918"
+    "last_checked": "2026-05-04T19:31:36.090168"
   },
   {
     "name": "Fedora Project",
     "domain": "fedoraproject.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:28.541256"
+    "last_checked": "2026-05-04T19:31:36.152476"
   },
   {
     "name": "Linux Mint",
     "domain": "linuxmint.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:28.719266"
+    "last_checked": "2026-05-04T19:31:36.317494"
   },
   {
     "name": "Linux Org",
     "domain": "linux.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:28.906330"
+    "last_checked": "2026-05-04T19:31:36.355066"
   },
   {
     "name": "OpenSuse",
     "domain": "opensuse.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:29.794668"
+    "last_checked": "2026-05-04T19:31:36.420015"
   },
   {
     "name": "Ubuntu",
     "domain": "ubuntu.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:29.876480"
+    "last_checked": "2026-05-04T19:31:36.530991"
   },
   {
     "name": "Arch Linux",
     "domain": "archlinux.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:29.981688"
+    "last_checked": "2026-05-04T19:31:36.698710"
   },
   {
     "name": "Unix",
     "domain": "unix.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:30.369776"
+    "last_checked": "2026-05-04T19:31:36.781964"
   },
   {
     "name": "Sublime Text",
     "domain": "sublimetext.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:30.478234"
+    "last_checked": "2026-05-04T19:31:36.866461"
   },
   {
     "name": "Atom IDE",
     "domain": "atom-editor.cc",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:30.498127"
+    "last_checked": "2026-05-04T19:31:36.925729"
   },
   {
     "name": "Spyder IDE",
     "domain": "spyder-ide.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:30.675324"
+    "last_checked": "2026-05-04T19:31:36.955629"
   },
   {
     "name": "Chartered Institute of Payroll Professionals",
     "domain": "cipp.org.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:30.799311"
+    "last_checked": "2026-05-04T19:31:36.989657"
   },
   {
     "name": "You Porn",
     "domain": "youporn.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:30.853348"
+    "last_checked": "2026-05-04T19:31:37.039136"
   },
   {
     "name": "Pornhub",
     "domain": "pornhub.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:30.940562"
+    "last_checked": "2026-05-04T19:31:37.122510"
   },
   {
     "name": "Foobar",
     "domain": "foobar2000.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:31.125204"
+    "last_checked": "2026-05-04T19:31:37.166878"
   },
   {
     "name": "TridentUK",
     "domain": "tridentuk.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.161870"
+    "last_checked": "2026-05-04T19:31:37.294848"
   },
   {
     "name": "Shodan",
     "domain": "shodan.io",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.186367"
+    "last_checked": "2026-05-04T19:31:37.347186"
   },
   {
     "name": "Schitt",
     "domain": "schiit.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.304429"
+    "last_checked": "2026-05-04T19:31:37.391473"
   },
   {
     "name": "Schitt",
     "domain": "schiit.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.313661"
+    "last_checked": "2026-05-04T19:31:37.515281"
   },
   {
     "name": "Hifiman",
     "domain": "hifiman.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:31.542210"
+    "last_checked": "2026-05-04T19:31:37.778390"
   },
   {
     "name": "Open Source Org",
     "domain": "opensource.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.716955"
+    "last_checked": "2026-05-04T19:31:37.794651"
   },
   {
     "name": "Mcdonalds",
     "domain": "mcdonalds.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.864248"
+    "last_checked": "2026-05-04T19:31:37.841453"
   },
   {
     "name": "Popeyes UK",
     "domain": "popeyesuk.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:31.945107"
+    "last_checked": "2026-05-04T19:31:37.917750"
   },
   {
     "name": "CSS Validator",
     "domain": "css-validator.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:32.113030"
+    "last_checked": "2026-05-04T19:31:37.975359"
   },
   {
     "name": "Band Aid",
     "domain": "band-aid.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:32.148626"
+    "last_checked": "2026-05-04T19:31:38.004462"
   },
   {
     "name": "Bayer",
     "domain": "bayer.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.375220"
+    "last_checked": "2026-05-04T19:31:38.016954"
   },
   {
     "name": "Angular",
     "domain": "angular.dev",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:32.539407"
+    "last_checked": "2026-05-04T19:31:38.089390"
   },
   {
     "name": "OVH cloud",
     "domain": "ovhcloud.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.643252"
+    "last_checked": "2026-05-04T19:31:38.219730"
   },
   {
     "name": "OVH cloud",
     "domain": "ovh.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.698286"
+    "last_checked": "2026-05-04T19:31:38.347277"
   },
   {
     "name": "Audeze",
     "domain": "audeze.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.800832"
+    "last_checked": "2026-05-04T19:31:38.441889"
   },
   {
     "name": "Canon",
     "domain": "canon.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:32.812676"
+    "last_checked": "2026-05-04T19:31:38.607845"
   },
   {
     "name": "Denon",
     "domain": "denon.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.822377"
+    "last_checked": "2026-05-04T19:31:38.644136"
   },
   {
     "name": "MSP Glass",
     "domain": "mspglass.app",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.883689"
+    "last_checked": "2026-05-04T19:31:38.707461"
   },
   {
     "name": "Dreamhost",
     "domain": "dreamhost.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.895477"
+    "last_checked": "2026-05-04T19:31:38.743972"
   },
   {
     "name": "Bandcamp",
     "domain": "bandcamp.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:32.911135"
+    "last_checked": "2026-05-04T19:31:38.779970"
   },
   {
     "name": "Yandex",
     "domain": "yandex.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.040837"
+    "last_checked": "2026-05-04T19:31:38.950602"
   },
   {
     "name": "IME London",
     "domain": "imelondon.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.107547"
+    "last_checked": "2026-05-04T19:31:39.116621"
   },
   {
     "name": "ESPN",
     "domain": "espn.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.239527"
+    "last_checked": "2026-05-04T19:31:39.169337"
   },
   {
     "name": "Trivago",
     "domain": "trivago.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.360360"
+    "last_checked": "2026-05-04T19:31:39.201090"
   },
   {
     "name": "NY Gov",
     "domain": "ny.gov",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.374382"
+    "last_checked": "2026-05-04T19:31:39.252567"
   },
   {
     "name": "APK Pure",
     "domain": "apkpure.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.464415"
+    "last_checked": "2026-05-04T19:31:39.286570"
   },
   {
     "name": "Ticketmaster",
     "domain": "ticketmaster.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.469731"
+    "last_checked": "2026-05-04T19:31:39.301886"
   },
   {
     "name": "Sony",
     "domain": "sony.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.479777"
+    "last_checked": "2026-05-04T19:31:39.427761"
   },
   {
     "name": "Sony",
     "domain": "sony.jp",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.517794"
+    "last_checked": "2026-05-04T19:31:39.460243"
   },
   {
     "name": "Sony",
     "domain": "sony.net",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.554844"
+    "last_checked": "2026-05-04T19:31:39.518067"
   },
   {
     "name": "Sony",
     "domain": "sony.co.jp",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.566366"
+    "last_checked": "2026-05-04T19:31:39.675061"
   },
   {
     "name": "bitly",
     "domain": "bitly.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.571627"
+    "last_checked": "2026-05-04T19:31:39.724827"
   },
   {
     "name": "bitly",
     "domain": "bit.ly",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.637826"
+    "last_checked": "2026-05-04T19:31:39.787331"
   },
   {
     "name": "Crunchyroll",
     "domain": "crunchyroll.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.644532"
+    "last_checked": "2026-05-04T19:31:39.910028"
   },
   {
     "name": "Weebly",
     "domain": "weebly.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.730763"
+    "last_checked": "2026-05-04T19:31:39.921507"
   },
   {
     "name": "Reddit",
     "domain": "redd.it",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.761485"
+    "last_checked": "2026-05-04T19:31:39.935679"
   },
   {
     "name": "Spankbang",
     "domain": "spankbang.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:33.807158"
+    "last_checked": "2026-05-04T19:31:39.962690"
   },
   {
     "name": "Path Of Exile",
     "domain": "pathofexile.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.895261"
+    "last_checked": "2026-05-04T19:31:40.019606"
   },
   {
     "name": "itch io",
     "domain": "itch.io",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.902150"
+    "last_checked": "2026-05-04T19:31:40.038781"
   },
   {
     "name": "Pastebin",
     "domain": "pastebin.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:33.909665"
+    "last_checked": "2026-05-04T19:31:40.168850"
   },
   {
     "name": "Utorrent",
     "domain": "utorrent.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:34.127539"
+    "last_checked": "2026-05-04T19:31:40.211181"
   },
   {
     "name": "W3",
     "domain": "w3.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.134140"
+    "last_checked": "2026-05-04T19:31:40.229470"
   },
   {
     "name": "Upornia",
     "domain": "upornia.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:34.232975"
+    "last_checked": "2026-05-04T19:31:40.457656"
   },
   {
     "name": "Nexus Mods",
     "domain": "nexusmods.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.271164"
+    "last_checked": "2026-05-04T19:31:40.483806"
   },
   {
     "name": "Gamespot",
     "domain": "gamespot.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.285291"
+    "last_checked": "2026-05-04T19:31:40.531457"
   },
   {
     "name": "Uptodown",
     "domain": "uptodown.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.289935"
+    "last_checked": "2026-05-04T19:31:40.546694"
   },
   {
     "name": "GoFile",
     "domain": "gofile.io",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.380640"
+    "last_checked": "2026-05-04T19:31:40.602165"
   },
   {
     "name": "CCTV",
     "domain": "cctv.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:34.479412"
+    "last_checked": "2026-05-04T19:31:40.647344"
   },
   {
     "name": "MySQL",
     "domain": "mysql.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.500714"
+    "last_checked": "2026-05-04T19:31:40.662141"
   },
   {
     "name": "Brazzers",
     "domain": "brazzers.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.574191"
+    "last_checked": "2026-05-04T19:31:40.798174"
   },
   {
     "name": "Euronews",
     "domain": "euronews.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.647324"
+    "last_checked": "2026-05-04T19:31:40.871614"
   },
   {
     "name": "Informer",
     "domain": "informer.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.654193"
+    "last_checked": "2026-05-04T19:31:40.888930"
   },
   {
     "name": "British Council",
     "domain": "britishcouncil.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.880292"
+    "last_checked": "2026-05-04T19:31:41.036046"
   },
   {
     "name": "JS Fiddle",
     "domain": "jsfiddle.net",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:34.915874"
+    "last_checked": "2026-05-04T19:31:41.096089"
   },
   {
     "name": "4Shared",
     "domain": "4shared.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:35.144533"
+    "last_checked": "2026-05-04T19:31:41.149765"
   },
   {
     "name": "Go To Webinar",
     "domain": "gotowebinar.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:35.150593"
+    "last_checked": "2026-05-04T19:31:41.368127"
   },
   {
     "name": "University of Manchester",
     "domain": "manchester.ac.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:35.383400"
+    "last_checked": "2026-05-04T19:31:41.564128"
   },
   {
     "name": "University College London",
     "domain": "ucl.ac.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:35.799724"
+    "last_checked": "2026-05-04T19:31:41.671951"
   },
   {
     "name": "Imgbox",
     "domain": "imgbox.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:35.860297"
+    "last_checked": "2026-05-04T19:31:41.694561"
   },
   {
     "name": "Google Chrome",
     "domain": "chrome.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:35.965361"
+    "last_checked": "2026-05-04T19:31:41.735125"
   },
   {
     "name": "FourSquare",
     "domain": "foursquare.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:35.995947"
+    "last_checked": "2026-05-04T19:31:41.801653"
   },
   {
     "name": "Square Enix",
     "domain": "square-enix.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:36.007283"
+    "last_checked": "2026-05-04T19:31:41.851867"
   },
   {
     "name": "Paramount Plus",
     "domain": "paramountplus.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:36.127326"
+    "last_checked": "2026-05-04T19:31:41.959112"
   },
   {
     "name": "Wondershare",
     "domain": "wondershare.net",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:36.229389"
+    "last_checked": "2026-05-04T19:31:42.040397"
   },
   {
     "name": "Affinity",
     "domain": "affinity.net",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:36.323245"
+    "last_checked": "2026-05-04T19:31:42.055158"
   },
   {
     "name": "Transport For London (TFL)",
     "domain": "tfl.gov.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:36.332155"
+    "last_checked": "2026-05-04T19:31:42.075050"
   },
   {
     "name": "Disney",
     "domain": "disney.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:36.336409"
+    "last_checked": "2026-05-04T19:31:42.092337"
   },
   {
     "name": "Disney",
     "domain": "disney.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:36.484612"
+    "last_checked": "2026-05-04T19:31:42.268559"
   },
   {
     "name": "Copyscape",
     "domain": "copyscape.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:36.494316"
+    "last_checked": "2026-05-04T19:31:42.424180"
   },
   {
     "name": "Bauhaus",
     "domain": "bauhaus.eu",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:36.511620"
+    "last_checked": "2026-05-04T19:31:42.470701"
   },
   {
     "name": "Iran Gov",
     "domain": "gov.ir",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:36.603290"
+    "last_checked": "2026-05-04T19:31:42.669034"
   },
   {
     "name": "Greek Gov",
     "domain": "gov.gr",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:37.008755"
+    "last_checked": "2026-05-04T19:31:43.459493"
   },
   {
     "name": "Qatar Gov",
     "domain": "gov.qa",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:37.013838"
+    "last_checked": "2026-05-04T19:31:43.474228"
   },
   {
     "name": "Libreoffice",
     "domain": "libreoffice.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:37.275166"
+    "last_checked": "2026-05-04T19:31:43.620413"
   },
   {
     "name": "OpenVPN",
     "domain": "openvpn.net",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:37.358001"
+    "last_checked": "2026-05-04T19:31:43.637871"
   },
   {
     "name": "Sendvid",
     "domain": "sendvid.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:37.469771"
+    "last_checked": "2026-05-04T19:31:43.716949"
   },
   {
     "name": "Unilad",
     "domain": "unilad.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:37.556550"
+    "last_checked": "2026-05-04T19:31:43.773725"
   },
   {
     "name": "Manuals Lib",
     "domain": "manualslib.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:37.803579"
+    "last_checked": "2026-05-04T19:31:43.838176"
   },
   {
     "name": "Code beautify",
     "domain": "codebeautify.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:37.974963"
+    "last_checked": "2026-05-04T19:31:43.888194"
   },
   {
     "name": "Fitbit",
     "domain": "fitbit.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:38.056749"
+    "last_checked": "2026-05-04T19:31:44.030645"
   },
   {
     "name": "Postgres",
     "domain": "postgresql.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:38.155064"
+    "last_checked": "2026-05-04T19:31:44.048506"
   },
   {
     "name": "Up4Ever",
     "domain": "up-4ever.net",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:38.192504"
+    "last_checked": "2026-05-04T19:31:44.085444"
   },
   {
     "name": "Argentina Gov",
     "domain": "gob.ar",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:38.564123"
+    "last_checked": "2026-05-04T19:31:44.536064"
   },
   {
     "name": "CBS News",
     "domain": "cbsnews.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:38.568060"
+    "last_checked": "2026-05-04T19:31:44.553374"
   },
   {
     "name": "Matplotlib",
     "domain": "matplotlib.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:38.749002"
+    "last_checked": "2026-05-04T19:31:44.584402"
   },
   {
     "name": "CentOS",
     "domain": "centos.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:38.989919"
+    "last_checked": "2026-05-04T19:31:44.606798"
   },
   {
     "name": "National Geographic",
     "domain": "nationalgeographic.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:39.030024"
+    "last_checked": "2026-05-04T19:31:44.759956"
   },
   {
     "name": "How Long To beat",
     "domain": "howlongtobeat.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:39.066698"
+    "last_checked": "2026-05-04T19:31:44.795002"
   },
   {
     "name": "Patagonia",
     "domain": "patagonia.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:39.099307"
+    "last_checked": "2026-05-04T19:31:44.867351"
   },
   {
     "name": "Driver Pack",
     "domain": "driverpack.io",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:39.162127"
+    "last_checked": "2026-05-04T19:31:44.989453"
   },
   {
     "name": "Tensor Flow",
     "domain": "tensorflow.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:39.343471"
+    "last_checked": "2026-05-04T19:31:45.043491"
   },
   {
     "name": "The Windows Club",
     "domain": "thewindowsclub.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:39.358683"
+    "last_checked": "2026-05-04T19:31:45.174771"
   },
   {
     "name": "Panasonic",
     "domain": "panasonic.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:39.379805"
+    "last_checked": "2026-05-04T19:31:45.204503"
   },
   {
     "name": "Windows Update",
     "domain": "windowsupdate.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:39.382324"
+    "last_checked": "2026-05-04T19:31:45.209971"
   },
   {
     "name": "Chromium",
     "domain": "chromium.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:39.549544"
+    "last_checked": "2026-05-04T19:31:45.261049"
   },
   {
     "name": "Korea University",
     "domain": "korea.ac.kr",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.042121"
+    "last_checked": "2026-05-04T19:31:45.818264"
   },
   {
     "name": "Packethub",
     "domain": "packethub.net",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:40.110832"
+    "last_checked": "2026-05-04T19:31:45.882608"
   },
   {
     "name": "Little Fish Group",
     "domain": "littlefish.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.237673"
+    "last_checked": "2026-05-04T19:31:46.079669"
   },
   {
     "name": "PC World",
     "domain": "pcworld.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.256581"
+    "last_checked": "2026-05-04T19:31:46.138112"
   },
   {
     "name": "Computer World",
     "domain": "computerworld.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.266730"
+    "last_checked": "2026-05-04T19:31:46.265305"
   },
   {
     "name": "Ladbrokes",
     "domain": "ladbrokes.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:40.380744"
+    "last_checked": "2026-05-04T19:31:46.385460"
   },
   {
     "name": "William Hill",
     "domain": "williamhill.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.385022"
+    "last_checked": "2026-05-04T19:31:46.402213"
   },
   {
     "name": "GIMP",
     "domain": "gimp.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:40.561549"
+    "last_checked": "2026-05-04T19:31:46.460122"
   },
   {
     "name": "Tunnelbear",
     "domain": "tunnelbear.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.610321"
+    "last_checked": "2026-05-04T19:31:46.508936"
   },
   {
     "name": "Keplr",
     "domain": "keplr.app",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.680542"
+    "last_checked": "2026-05-04T19:31:46.569085"
   },
   {
     "name": "Pine64",
     "domain": "pine64.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.845565"
+    "last_checked": "2026-05-04T19:31:46.629247"
   },
   {
     "name": "Cyberpanel",
     "domain": "cyberpanel.net",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:40.929818"
+    "last_checked": "2026-05-04T19:31:46.688262"
   },
   {
     "name": "Center for Strategic And Budgetary Assessments (CSBA)",
     "domain": "csbaonline.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:41.144857"
+    "last_checked": "2026-05-04T19:31:46.757192"
   },
   {
     "name": "United Nations Office on Drugs and Crime",
     "domain": "unodc.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:41.254024"
+    "last_checked": "2026-05-04T19:31:46.934234"
   },
   {
     "name": "You and your hormones",
     "domain": "yourhormones.info",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:41.435212"
+    "last_checked": "2026-05-04T19:31:47.112205"
   },
   {
     "name": "DermNet",
     "domain": "dermnetnz.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:41.468922"
+    "last_checked": "2026-05-04T19:31:47.144979"
   },
   {
     "name": "Pioneer",
     "domain": "global.pioneer",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:41.927483"
+    "last_checked": "2026-05-04T19:31:47.456094"
   },
   {
     "name": "Rentry",
     "domain": "rentry.co",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:41.935676"
+    "last_checked": "2026-05-04T19:31:47.506520"
   },
   {
     "name": "Shark Ninja",
     "domain": "sharkninja.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:42.062247"
+    "last_checked": "2026-05-04T19:31:47.539723"
   },
   {
     "name": "Philip Morris",
     "domain": "philipmorrisusa.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:42.186406"
+    "last_checked": "2026-05-04T19:31:47.678527"
   },
   {
     "name": "Marlboro",
     "domain": "marlboro.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:42.195296"
+    "last_checked": "2026-05-04T19:31:47.733790"
   },
   {
     "name": "Buyee",
     "domain": "buyee.jp",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:42.232615"
+    "last_checked": "2026-05-04T19:31:47.801533"
   },
   {
     "name": "Selenium",
     "domain": "selenium.dev",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:42.380776"
+    "last_checked": "2026-05-04T19:31:47.984023"
   },
   {
     "name": "Cloudflare",
     "domain": "cloudflare-ipfs.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:42.469153"
+    "last_checked": "2026-05-04T19:31:48.046197"
   },
   {
     "name": "FIDO Alliance",
     "domain": "fidoalliance.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:42.645023"
+    "last_checked": "2026-05-04T19:31:48.085822"
   },
   {
     "name": "Vokhus",
     "domain": "vohkus.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:42.824677"
+    "last_checked": "2026-05-04T19:31:48.352902"
   },
   {
     "name": "Hotmail",
     "domain": "hotmail.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:42.907239"
+    "last_checked": "2026-05-04T19:31:48.362925"
   },
   {
     "name": "Hotmail",
     "domain": "hotmail.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.024469"
+    "last_checked": "2026-05-04T19:31:48.379946"
   },
   {
     "name": "Cyberwarfare Labs",
     "domain": "cyberwarfare.live",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.033858"
+    "last_checked": "2026-05-04T19:31:48.414529"
   },
   {
     "name": "Marvel",
     "domain": "marvel.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.050247"
+    "last_checked": "2026-05-04T19:31:48.559519"
   },
   {
     "name": "Warframe",
     "domain": "warframe.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.148032"
+    "last_checked": "2026-05-04T19:31:48.680298"
   },
   {
     "name": "Rotten Tomatoes.com",
     "domain": "rottentomatoes.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.181352"
+    "last_checked": "2026-05-04T19:31:48.806922"
   },
   {
     "name": "Guinness World Records",
     "domain": "guinnessworldrecords.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.251299"
+    "last_checked": "2026-05-04T19:31:48.841142"
   },
   {
     "name": "Audi",
     "domain": "audi.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.375011"
+    "last_checked": "2026-05-04T19:31:48.869692"
   },
   {
     "name": "Audi",
     "domain": "audi.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.385334"
+    "last_checked": "2026-05-04T19:31:48.922914"
   },
   {
     "name": "Neopets",
     "domain": "neopets.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.486150"
+    "last_checked": "2026-05-04T19:31:48.963317"
   },
   {
     "name": "Mindsight Institute",
     "domain": "mindsightinstitute.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:43.499817"
+    "last_checked": "2026-05-04T19:31:49.038412"
   },
   {
     "name": "Defcon",
     "domain": "defcon.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:43.668949"
+    "last_checked": "2026-05-04T19:31:49.164023"
   },
   {
     "name": "CryptoNest",
     "domain": "cryptonest.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:43.798413"
+    "last_checked": "2026-05-04T19:31:49.211656"
   },
   {
     "name": "WinAuth",
     "domain": "winauth.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:43.979555"
+    "last_checked": "2026-05-04T19:31:49.250006"
   },
   {
     "name": "Wavesor",
     "domain": "wavesor.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:44.038531"
+    "last_checked": "2026-05-04T19:31:49.382006"
   },
   {
     "name": "EdgePilot (OpenText)",
     "domain": "edgepilot.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:44.176740"
+    "last_checked": "2026-05-04T19:31:49.464037"
   },
   {
     "name": "WWE",
     "domain": "wwe.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.188455"
+    "last_checked": "2026-05-04T19:31:49.620051"
   },
   {
     "name": "Ricoh",
     "domain": "ricoh.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.552069"
+    "last_checked": "2026-05-04T19:31:49.767165"
   },
   {
     "name": "Gaijin",
     "domain": "gaijin.net",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.592686"
+    "last_checked": "2026-05-04T19:31:49.824986"
   },
   {
     "name": "Jupyter",
     "domain": "jupyter.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.601719"
+    "last_checked": "2026-05-04T19:31:49.866990"
   },
   {
     "name": "Cartoon Network",
     "domain": "cartoonnetwork.ca",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.638242"
+    "last_checked": "2026-05-04T19:31:49.946637"
   },
   {
     "name": "R2 Games",
     "domain": "r2games.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:44.682570"
+    "last_checked": "2026-05-04T19:31:50.000149"
   },
   {
     "name": "Dragonpass",
     "domain": "dragonpass.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.770754"
+    "last_checked": "2026-05-04T19:31:50.072891"
   },
   {
     "name": "DeLonghi",
     "domain": "delonghi.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.919603"
+    "last_checked": "2026-05-04T19:31:50.232601"
   },
   {
     "name": "Channel 5",
     "domain": "channel5.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.943096"
+    "last_checked": "2026-05-04T19:31:50.351845"
   },
   {
     "name": "Gillette",
     "domain": "gillette.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:44.953356"
+    "last_checked": "2026-05-04T19:31:50.368314"
   },
   {
     "name": "RClone",
     "domain": "rclone.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:45.136684"
+    "last_checked": "2026-05-04T19:31:50.400948"
   },
   {
     "name": "Motorola",
     "domain": "motorola.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.168353"
+    "last_checked": "2026-05-04T19:31:50.454264"
   },
   {
     "name": "Blackberry",
     "domain": "blackberry.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.177065"
+    "last_checked": "2026-05-04T19:31:50.470990"
   },
   {
     "name": "APK 4 Fun",
     "domain": "apk4fun.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.210771"
+    "last_checked": "2026-05-04T19:31:50.530171"
   },
   {
     "name": "APK Fun",
     "domain": "apkfun.org",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:45.382317"
+    "last_checked": "2026-05-04T19:31:50.578178"
   },
   {
     "name": "Kleenex",
     "domain": "kleenex.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.503627"
+    "last_checked": "2026-05-04T19:31:50.607491"
   },
   {
     "name": "Axios (Promise based HTTP Client)",
     "domain": "axios.rest",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:45.510631"
+    "last_checked": "2026-05-04T19:31:50.638195"
   },
   {
     "name": "Drupal",
     "domain": "drupal.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.524425"
+    "last_checked": "2026-05-04T19:31:50.655224"
   },
   {
     "name": "Drupal",
     "domain": "drupal.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.525108"
+    "last_checked": "2026-05-04T19:31:50.655881"
   },
   {
     "name": "Intel",
     "domain": "intel.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:45.740321"
+    "last_checked": "2026-05-04T19:31:50.738696"
   },
   {
     "name": "Intel",
     "domain": "intel.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:45.832572"
+    "last_checked": "2026-05-04T19:31:50.808932"
   },
   {
     "name": "Bosnian Government",
     "domain": "gov.ba",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:47.188218"
+    "last_checked": "2026-05-04T19:31:50.826501"
   },
   {
     "name": "Django",
     "domain": "djangoproject.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:47.195143"
+    "last_checked": "2026-05-04T19:31:50.885609"
   },
   {
     "name": "Yorkshire Tea",
     "domain": "yorkshiretea.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:47.334751"
+    "last_checked": "2026-05-04T19:31:50.921461"
   },
   {
     "name": "Ralph Lauren",
     "domain": "ralphlauren.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:47.456719"
+    "last_checked": "2026-05-04T19:31:50.951321"
   },
   {
     "name": "Armani",
     "domain": "armani.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:47.543103"
+    "last_checked": "2026-05-04T19:31:51.081693"
   },
   {
     "name": "Kenwood",
     "domain": "kenwoodworld.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:47.673096"
+    "last_checked": "2026-05-04T19:31:51.209635"
   },
   {
     "name": "LibreOffice",
     "domain": "libreoffice.org",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:47.673758"
+    "last_checked": "2026-05-04T19:31:51.210320"
   },
   {
     "name": "Exagenica",
     "domain": "exagenica.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:47.759243"
+    "last_checked": "2026-05-04T19:31:51.276632"
   },
   {
     "name": "Shell",
     "domain": "shell.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:47.969319"
+    "last_checked": "2026-05-04T19:31:51.420022"
   },
   {
     "name": "Dice",
     "domain": "dicefm.com",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:48.003218"
+    "last_checked": "2026-05-04T19:31:51.532176"
   },
   {
     "name": "Travelex",
     "domain": "travelex.co.uk",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:52.309577"
+    "last_checked": "2026-05-04T19:31:51.560867"
   },
   {
     "name": "Starbucks",
     "domain": "starbucks.co.uk",
     "status": "no_dmarc",
-    "last_checked": "2026-05-04T18:55:52.428996"
+    "last_checked": "2026-05-04T19:31:51.610355"
   },
   {
     "name": "Cafe Nero",
     "domain": "caffenero.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:52.440306"
+    "last_checked": "2026-05-04T19:31:51.636356"
+  },
+  {
+    "name": "Schweppes",
+    "domain": "schweppes.eu",
+    "status": "p_none",
+    "last_checked": "2026-05-04T19:31:51.683839"
+  },
+  {
+    "name": "Barbour",
+    "domain": "barbour.com",
+    "status": "p_none",
+    "last_checked": "2026-05-04T19:31:51.820055"
+  },
+  {
+    "name": "Prada",
+    "domain": "prada.com",
+    "status": "p_none",
+    "last_checked": "2026-05-04T19:31:51.879239"
+  },
+  {
+    "name": "Drop (Massdrop)",
+    "domain": "drop.com",
+    "status": "p_none",
+    "last_checked": "2026-05-04T19:31:51.961687"
+  },
+  {
+    "name": "Hak5",
+    "domain": "hak5.org",
+    "status": "p_none",
+    "last_checked": "2026-05-04T19:31:51.991597"
+  },
+  {
+    "name": "TicketWeb",
+    "domain": "ticketweb.uk",
+    "status": "p_none",
+    "last_checked": "2026-05-04T19:31:52.157048"
   },
   {
     "name": "PartyPoker",
     "domain": "partypoker.com",
     "status": "p_none",
-    "last_checked": "2026-05-04T18:55:52.681930"
+    "last_checked": "2026-05-04T19:31:52.241237"
   }
 ]
