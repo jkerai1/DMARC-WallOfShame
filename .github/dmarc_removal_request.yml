@@ -1,0 +1,85 @@
+name: "✅ Removal Request"
+description: "Request removal of a domain that has since fixed its DMARC configuration."
+title: "[REMOVAL] <domain.com>"
+labels: ["removal-request", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If your domain has been listed and you have since fixed the DMARC issue, you can request removal here.
+        Please provide evidence that the problem has been resolved. Removal requests without verification evidence will not be actioned.
+
+  - type: input
+    id: domain
+    attributes:
+      label: "Domain"
+      description: "The domain you are requesting removal for."
+      placeholder: "example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: requester_type
+    attributes:
+      label: "Who are you?"
+      description: "What is your relationship to this domain?"
+      options:
+        - "Domain / organisation owner"
+        - "Authorised IT/security representative"
+        - "Third-party reporter (I noticed it's been fixed)"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_dmarc
+    attributes:
+      label: "Current DMARC Record"
+      description: "Paste the updated DMARC TXT record from `_dmarc.<domain>` showing the fix."
+      placeholder: "v=DMARC1; p=reject; rua=mailto:dmarc@example.com; ruf=mailto:dmarc@example.com; adkim=s; aspf=s"
+    validations:
+      required: true
+
+  - type: input
+    id: policy
+    attributes:
+      label: "New DMARC Policy"
+      description: "What is the enforced policy now? (p=quarantine or p=reject are acceptable for removal)"
+      placeholder: "p=reject"
+    validations:
+      required: true
+
+  - type: input
+    id: verification_url
+    attributes:
+      label: "Verification Link"
+      description: "Link to a DMARC lookup tool confirming the fix."
+      placeholder: "https://mxtoolbox.com/SuperTool.aspx?action=dmarc%3Aexample.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: fix_description
+    attributes:
+      label: "What Was Fixed?"
+      description: "Briefly describe what change was made (e.g. 'Moved from p=none to p=reject, added SPF -all')."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional Context"
+      description: "Any other information that would help verify the fix (e.g. date of change, ticket reference)."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Removal Checklist"
+      options:
+        - label: "The DMARC record has been updated and is publicly verifiable via DNS."
+          required: true
+        - label: "The policy is now `p=quarantine` or `p=reject` (not `p=none`)."
+          required: true
+        - label: "I have provided a verification link or screenshot confirming the fix."
+          required: true
