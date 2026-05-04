@@ -288,5 +288,7 @@
   {"name": "Drop (Massdrop)", "domain": "drop.com" },
   {"name": "Hak5", "domain": "hak5.org" },
   {"name": "TicketWeb", "domain": "ticketweb.uk" },
-  {"name": "PartyPoker", "domain": "partypoker.com" }
+  {"name": "PartyPoker", "domain": "partypoker.com" },
+  {"name": "EasyEntra", "domain": "easyentra.com" },
+  {"name": "ENow Software", "domain": "enowsoftware.com" }
 ]
