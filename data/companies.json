@@ -85,6 +85,7 @@
   { "name": "Blackhat", "domain": "blackhat.com" },
   { "name": "LG", "domain": "lg.com" },
   { "name": "Samsung", "domain": "samsung.com" },
+  { "name": "Samsung", "domain": "samsungmobile.com" },
   { "name": "Box", "domain": "box.co.uk" },
   { "name": "Xiaomi", "domain": "mi.com" },
   { "name": "ID net", "domain": "idnet.com" },
@@ -309,5 +310,8 @@
   {"name": "Cisco", "domain": "umbrella.com" },
   {"name": "Helium Browser", "domain": "helium.computer" },
   {"name": "Zen Browser", "domain": "zen-browser.app" },
+  {"name": "Myra Security", "domain": "myrasecurity.com" },
+  {"name": "UK Maritime Operations Center", "domain": "ukmto.org" },
+  {"name": "Security Org", "domain": "security.org" },
   {"name": "clicktravel by Perk", "domain": "clicktravel.co.uk" }
 ]
