@@ -300,5 +300,7 @@
   {"name": "Crocs", "domain": "crocs.co.uk" },
   {"name": "Greggs", "domain": "greggs.com" },
   {"name": "Wenzels", "domain": "wenzels.co.uk" },
-  {"name": "Universal Pictures", "domain": "universalpictures.co.uk" }
+  {"name": "Universal Pictures", "domain": "universalpictures.co.uk" },
+  {"name": "Co-op", "domain": "coop.co.uk" },
+  {"name": "clicktravel by Perk", "domain": "clicktravel.co.uk" }
 ]
