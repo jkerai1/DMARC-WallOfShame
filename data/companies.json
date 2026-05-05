@@ -303,5 +303,9 @@
   {"name": "Wenzels", "domain": "wenzels.co.uk" },
   {"name": "Universal Pictures", "domain": "universalpictures.co.uk" },
   {"name": "Co-op", "domain": "coop.co.uk" },
+  {"name": "SimpleHelp", "domain": "simple-help.com" },
+  {"name": "Cisco", "domain": "umbrella.com" },
+  {"name": "Helium Browser", "domain": "helium.computer" },
+  {"name": "Zen Browser", "domain": "zen-browser.app" },
   {"name": "clicktravel by Perk", "domain": "clicktravel.co.uk" }
 ]
