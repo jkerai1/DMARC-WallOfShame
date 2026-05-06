@@ -333,5 +333,6 @@
   {"name": "Cylance", "domain": "cylance.com" },
   {"name": "Cybaverse", "domain": "cybaverse.co.uk" },
   {"name": "Fujitsu", "domain": "global.fujitsu" },
-  {"name": "Infinigate", "domain": "infinigate.com" }
+  {"name": "Infinigate", "domain": "infinigate.com" },
+  {"name": "Webroot", "domain": "webroot.com" }
 ]
