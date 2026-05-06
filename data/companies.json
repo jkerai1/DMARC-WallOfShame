@@ -268,7 +268,6 @@
   {"name": "Kleenex", "domain": "kleenex.co.uk" },
   {"name": "Axios (Promise based HTTP Client)", "domain": "axios.rest" },
   {"name": "Drupal", "domain": "drupal.org" },
-  {"name": "Drupal", "domain": "drupal.org" },
   {"name": "Intel", "domain": "intel.co.uk" },
   {"name": "Intel", "domain": "intel.com" },
   {"name": "Bosnian Government", "domain": "gov.ba" },
@@ -333,5 +332,7 @@
   {"name": "Cylance", "domain": "cylance.com" },
   {"name": "Cybaverse", "domain": "cybaverse.co.uk" },
   {"name": "Fujitsu", "domain": "global.fujitsu" },
-  {"name": "Infinigate", "domain": "infinigate.com" }
+  {"name": "Infinigate", "domain": "infinigate.com" },
+  {"name": "Gigantic", "domain": "gigantic.com" },
+  {"name": "Hemingway App", "domain": "hemingwayapp.com" }
 ]
