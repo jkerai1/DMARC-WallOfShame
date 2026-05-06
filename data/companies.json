@@ -332,5 +332,6 @@
   {"name": "Nutanix", "domain": "nutanix.com" },
   {"name": "Cylance", "domain": "cylance.com" },
   {"name": "Cybaverse", "domain": "cybaverse.co.uk" },
-  {"name": "Fujitsu", "domain": "global.fujitsu" }
+  {"name": "Fujitsu", "domain": "global.fujitsu" },
+  {"name": "Infinigate", "domain": "infinigate.com" },
 ]
