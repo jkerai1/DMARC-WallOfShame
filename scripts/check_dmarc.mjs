@@ -1,3 +1,7 @@
+// Bulk DMARC auditor: reads company domains from data/companies.json, resolves
+// _dmarc.<domain> TXT, and writes docs/non_dmarc.json listing domains with no
+// record or policy p=none (quarantine/reject domains are omitted from output).
+//
 // Node's dns.resolve* paths use libuv's thread pool, which defaults to 4
 // workers. Set UV_THREADPOOL_SIZE before starting node to at least your
 // --concurrency (we default to 48). Example:
@@ -15,7 +19,9 @@ import { performance } from "node:perf_hooks";
 import dnsPromises from "node:dns/promises";
 import { parseArgs } from "node:util";
 
+/** Source list: objects with at least { name, domain }. */
 const INPUT_FILE = "data/companies.json";
+/** Domains that lack DMARC or use p=none only; used by the site/docs. */
 const OUTPUT_FILE = "docs/non_dmarc.json";
 const DEFAULT_CONCURRENCY = 48;
 
@@ -30,6 +36,7 @@ function intFromEnv(name, fallback) {
   return Number.isFinite(n) ? n : fallback;
 }
 
+/** Optional resolver override (`DMARC_DNS_SERVERS`) for speed/predictability on CI or bulk runs. */
 function configureDnsFromEnv() {
   const raw = process.env.DMARC_DNS_SERVERS?.trim();
   if (!raw) return;
@@ -40,6 +47,7 @@ function configureDnsFromEnv() {
 configureDnsFromEnv();
 
 /**
+ * “No usable answer” — definitive (do not retry); callers treat as no DMARC for this run.
  * @param {unknown} err
  * @returns {boolean}
  */
@@ -49,6 +57,7 @@ function isTerminalDnsError(err) {
 }
 
 /**
+ * Infrastructure / overload style failures worth backing off and retrying.
  * @param {unknown} err
  * @returns {boolean}
  */
@@ -69,6 +78,7 @@ function isRetryableDnsError(err) {
 }
 
 /**
+ * node:dns/promises has no per-query deadline; clears stuck resolves after timeoutMs.
  * @param {string} hostname
  * @param {number} timeoutMs
  * @returns {Promise<string[][]>}
@@ -92,6 +102,8 @@ function resolveTxtWithTimeout(hostname, timeoutMs) {
 }
 
 /**
+ * Parsed aggregate policy (`p=` tag): `none` | `quarantine` | `reject`, or null if not DMARC TXT.
+ * RDATA may be split into multiple string chunks; tags are semicolon-separated `key=value`; missing `p` ⇒ `none`.
  * @param {string[]} chunks
  * @returns {string | null}
  */
@@ -114,6 +126,7 @@ function policyFromTxtChunks(chunks) {
 }
 
 /**
+ * Lookup `_dmarc.<domain>` TXT with retries/backoff on transient resolver errors only.
  * @param {string} domain
  * @param {number} timeoutMs
  * @param {number} maxAttempts
@@ -124,6 +137,7 @@ async function getDmarcPolicy(domain, timeoutMs, maxAttempts) {
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     try {
       const answers = await resolveTxtWithTimeout(host, timeoutMs);
+      // First valid DMARC TXT wins if multiple RR strings exist for the name.
       for (const chunks of answers) {
         const policy = policyFromTxtChunks(chunks);
         if (policy !== null) return policy;
@@ -133,6 +147,7 @@ async function getDmarcPolicy(domain, timeoutMs, maxAttempts) {
       if (isTerminalDnsError(err)) return null;
       if (!isRetryableDnsError(err)) return null;
       if (attempt + 1 >= maxAttempts) return null;
+      // Exponential backoff reduces thundering herd against resolvers under load.
       await new Promise((r) => setTimeout(r, 120 * 2 ** attempt));
     }
   }
@@ -140,6 +155,7 @@ async function getDmarcPolicy(domain, timeoutMs, maxAttempts) {
 }
 
 /**
+ * Rows for domains that belong on the list: missing DMARC or `p=none` only (quarantine/reject omitted).
  * @param {{ name: string; domain: string }} company
  * @param {string | null} policy
  * @param {string} lastChecked
@@ -164,6 +180,7 @@ function entryForCompany(company, policy, lastChecked) {
 }
 
 /**
+ * Run lookups with fixed concurrency via a semaphore (no extra deps); deterministic domain sort at end.
  * @param {{ name: string; domain: string }[]} companies
  * @param {number} concurrency
  * @param {number} timeoutMs
@@ -210,7 +227,7 @@ async function runParallelLookups(companies, concurrency, timeoutMs, maxAttempts
 
   const results = await Promise.all(companies.map((c) => one(c)));
   const flagged = results.filter((r) => r !== null);
-  flagged.sort((a, b) => a.domain.localeCompare(b.domain));
+  flagged.sort((a, b) => a.domain.localeCompare(b.domain)); // Stable doc diffs / browsing
   return flagged;
 }
 
@@ -225,6 +242,7 @@ async function writeOutput(flagged) {
 
 const { values } = parseArgs({
   options: {
+    // --concurrency: max simultaneous _dmarc lookups (balance resolver vs speed).
     concurrency: { type: "string", default: String(DEFAULT_CONCURRENCY) },
   },
 });
@@ -248,4 +266,5 @@ if (!Array.isArray(companies)) {
 const flagged = await runParallelLookups(companies, concurrency, queryTimeoutMs, maxAttempts);
 await writeOutput(flagged);
 const elapsed = (performance.now() - t0) / 1000;
+// Machine-readable timing for cron/CI logs (counts include only “weak” DMARC outcomes).
 console.log(`elapsed_seconds=${elapsed.toFixed(3)}`);
