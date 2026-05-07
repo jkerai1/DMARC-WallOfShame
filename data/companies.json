@@ -7,6 +7,7 @@
   { "name": "Asda", "domain": "asda.com" },
   { "name": "Vauxhall", "domain": "vauxhall.co.uk" },
   { "name": "TicketMaster", "domain": "ticketmaster.co.uk" },
+  { "name": "TicketMaster", "domain": "ticketmaster.com" },
   { "name": "Github", "domain": "github.io" },
   { "name": "Github", "domain": "github.dev" },
   { "name": "Github", "domain": "github.blog" },
@@ -964,5 +965,10 @@
   { "name": "Zitcom", "domain": "zitcom.dk" },
   { "name": "Zonith", "domain": "zonith.com" },
   { "name": "Zooplus", "domain": "zooplus.dk" },
-  { "name": "Zylinc", "domain": "zylinc.com" }
+  { "name": "Zylinc", "domain": "zylinc.com" },
+  { "name": "Invictus", "domain": "invictus-ir.com" },
+  { "name": "Mitsubishi", "domain": "mitsubishi-motors.co.uk" },
+  { "name": "Fiat", "domain": "fiat.co.uk" },
+  { "name": "Bentley Motors", "domain": "bentleymotors.com" },
+  { "name": "Aston Martin", "domain": "Aston Martin" }
 ]
