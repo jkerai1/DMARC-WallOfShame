@@ -309,6 +309,7 @@
   {"name": "Co-op", "domain": "coop.co.uk" },
   {"name": "SimpleHelp", "domain": "simple-help.com" },
   {"name": "Cisco", "domain": "umbrella.com" },
+  {"name": "Cisco", "domain": "opendns.com" },
   {"name": "Helium Browser", "domain": "helium.computer" },
   {"name": "Zen Browser", "domain": "zen-browser.app" },
   {"name": "Myra Security", "domain": "myrasecurity.com" },
@@ -970,5 +971,8 @@
   { "name": "Mitsubishi", "domain": "mitsubishi-motors.co.uk" },
   { "name": "Fiat", "domain": "fiat.co.uk" },
   { "name": "Bentley Motors", "domain": "bentleymotors.com" },
-  { "name": "Aston Martin", "domain": "Aston Martin" }
+  { "name": "Aston Martin", "domain": "Aston Martin" },
+  { "name": "Brenner IT", "domain": "brennercom.it" },
+  { "name": "Cogeco", "domain": "cogeco.com" },
+  { "name": "Aussie Broadband", "domain": "cogeco.com" }
 ]
