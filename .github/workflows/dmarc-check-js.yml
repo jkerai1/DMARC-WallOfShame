@@ -1,0 +1,44 @@
+name: DMARC Check
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # daily run
+  workflow_dispatch:       # manual run
+
+  push:
+    paths:
+      - "data/companies.json" 
+
+permissions:
+  contents: write
+
+env:
+  # Upcoming Actions default; avoids Node 20 action-runtime warnings until default flips.
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      # dns.promises.resolveTxt uses the libuv pool (default 4); without this,
+      # concurrent lookups are mostly capped at ~4 regardless of --concurrency.
+      UV_THREADPOOL_SIZE: 256
+      # Public resolvers: faster and more consistent than the runner stub; remove to use system DNS.
+      DMARC_DNS_SERVERS: "1.1.1.1,8.8.8.8"
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Run DMARC check
+        run: node scripts/check_dmarc.mjs
+
+      - name: Upload non_dmarc.json
+        uses: actions/upload-artifact@v6
+        with:
+          name: non_dmarc-json
+          path: docs/non_dmarc.json
