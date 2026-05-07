@@ -1,92 +1,211 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>DMARC Watch</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="subtitle">
-  <p>
-    Domains listed here lack proper enforcement (no DMARC policy or set to <code>p=none</code>).
-    While <code>p=none</code> can be used temporarily for monitoring, it should not be a permanent configuration.
-  </p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DMARC Wall of Shame — public audit of domains without DMARC enforcement</title>
+    <meta
+      name="description"
+      content="Browse domains with no DMARC record or p=none (monitor-only) policies. Educational DNS audit list updated from automated checks; filter, export CSV, and learn why enforcement matters."
+    />
+    <link rel="canonical" href="https://dmarcwallofshame.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DMARC Wall of Shame" />
+    <meta property="og:title" content="DMARC Wall of Shame — public audit log" />
+    <meta
+      property="og:description"
+      content="Browse domains with no DMARC record or p=none policies. Educational list from DNS checks; filter and export."
+    />
+    <meta property="og:url" content="https://dmarcwallofshame.org/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DMARC Wall of Shame — public audit log" />
+    <meta
+      name="twitter:description"
+      content="Browse domains with no DMARC record or p=none policies. Educational list from DNS checks; filter and export."
+    />
+    <meta name="theme-color" content="#0c0d0a" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://dmarcwallofshame.org/#website",
+            "name": "DMARC Wall of Shame",
+            "url": "https://dmarcwallofshame.org/",
+            "description": "Public, educational list of domains lacking DMARC enforcement (no record or p=none), derived from DNS checks."
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://dmarcwallofshame.org/#webpage",
+            "url": "https://dmarcwallofshame.org/",
+            "name": "DMARC Wall of Shame — public audit log",
+            "description": "Browse domains with no DMARC record or monitor-only p=none policies. Filter, paginate, and export the dataset.",
+            "isPartOf": { "@id": "https://dmarcwallofshame.org/#website" }
+          },
+          {
+            "@type": "Dataset",
+            "name": "DMARC Wall of Shame — non-enforced domains",
+            "description": "JSON dataset of organisation names, domains, DMARC status (no_dmarc or p_none), and last-checked timestamps from automated DNS lookups.",
+            "url": "https://dmarcwallofshame.org/non_dmarc.json",
+            "distribution": {
+              "@type": "DataDownload",
+              "encodingFormat": "application/json",
+              "contentUrl": "https://dmarcwallofshame.org/non_dmarc.json"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body data-theme="dark">
+    <div class="scan"></div>
+    <main class="term">
+      <h1 class="sr-only">DMARC Wall of Shame</h1>
+      <div class="bar">
+        <div class="left">
+          <span class="dot"></span>
+          <span class="path">~ / wall-of-shame / <b>domains.json</b></span>
+          <button class="iconbtn theme-inline" id="themeBtn" type="button" title="Toggle theme">◐</button>
+        </div>
+        <div class="right-actions">
+          <span class="pill"
+            ><span class="live-dot"></span> Live · <b id="lastChecked">—</b></span
+          >
+          <a class="launch-btn" href="dmarc-check.html">▶ check_my_domain.sh</a>
+          <a
+            class="launch-btn"
+            href="https://github.com/jkerai1/DMARC-WallOfShame"
+            rel="me external noopener noreferrer"
+            >repo</a
+          >
+        </div>
+      </div>
 
-  <p>
-    Even domains that do not send email should implement DMARC with a policy of <code>p=reject</code> and be properly parked.
-    For example, use <code>v=spf1 -all</code> to ensure no IP address is authorized to send email.
-    Follow official guidance:
-    <a href="https://www.ncsc.gov.uk/blog-post/protecting-parked-domains" target="_blank" rel="noopener noreferrer">
-      Protecting parked domains (NCSC)
-    </a>.
-  </p>
+      <pre class="ascii" aria-hidden="true">
+ ██████╗ ███╗   ███╗ █████╗ ██████╗  ██████╗
+ ██╔══██╗████╗ ████║██╔══██╗██╔══██╗██╔════╝
+ ██║  ██║██╔████╔██║███████║██████╔╝██║     
+ ██║  ██║██║╚██╔╝██║██╔══██║██╔══██╗██║     
+ ██████╔╝██║ ╚═╝ ██║██║  ██║██║  ██║╚██████╗
+ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
+   wall · of · shame      [public audit log]
+    </pre>
 
-  <p>
-    <strong>Note:</strong> Companies or entities listed here may have valid DMARC policies on other domains.
-  </p>
+      <div class="session" id="session"></div>
 
-  <p>
-    <strong>Additional note:</strong> If your organization uses Microsoft Entra / Microsoft 365,
-    you should also configure DMARC for your <code>.onmicrosoft.com</code> domain.
-    Learn more:
-    <a href="https://o365info.com/dkim-dmarc-onmicrosoft-com-domain/" target="_blank" rel="noopener noreferrer">
-      DKIM & DMARC for onmicrosoft.com domains
-    </a>.
-    This list does not include <code>.onmicrosoft.com</code> domains.
-  </p>
+      <section class="grid">
+        <div class="cell">
+          <div class="k">total_records</div>
+          <div class="v" id="stTotal">—</div>
+        </div>
+        <div class="cell s">
+          <div class="k">no_dmarc</div>
+          <div class="v" id="stNo">—</div>
+        </div>
+        <div class="cell w">
+          <div class="k">policy=none</div>
+          <div class="v" id="stP">—</div>
+        </div>
+      </section>
 
-  <p>
-    Contribute to this project:
-    <a href="https://github.com/jkerai1/DMARC-WallOfShame" target="_blank" rel="noopener noreferrer">
-      DMARC Wall of Shame (GitHub)
-    </a>
-  </p>
-    <p>
-    <strong>Additional note:</strong> Entries will get automatically cleared down from this list when DMARC is corrected. Do not raise issue for corrected domains.
-    </a>
-  </p>
-<p> 
-This is only for educational purposes to spread the awareness of DMARC importance. The term "Wall of shame" is used humorously and descriptively in the context of cybersecurity awareness culture and is not intended to defame, disparage, or harm any organization. The prescence of a domain does not imply misconduct or compromise. Results are based only on publicly observable DNS records at the time of the Github Action run which is on a cron.
-</p>
-</div>
-  <div class="controls">
-    <input type="text" id="search" placeholder="Search company or domain..." />
+      <section class="controls" id="controls">
+        <label class="input">
+          <input id="q" placeholder="grep -i 'name|domain|.tld|industry' …" autocomplete="off" />
+        </label>
+        <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false">
+          <span class="dotbadge"></span> filters ▾
+        </button>
+        <div class="filters">
+          <div class="seg" id="statusSeg">
+            <button type="button" data-v="all" class="on">all</button>
+            <button type="button" data-v="no_dmarc">no_dmarc</button>
+            <button type="button" data-v="p_none">p=none</button>
+          </div>
+          <select class="select" id="tldSel" aria-label="Filter by TLD">
+            <option value="">tld: any</option>
+          </select>
+          <select class="select" id="indSel" aria-label="Filter by industry">
+            <option value="">industry: any</option>
+          </select>
+          <select class="select" id="sortSel" aria-label="Sort list">
+            <option value="az">sort: name ↑</option>
+            <option value="za">sort: name ↓</option>
+            <option value="tld">sort: tld</option>
+            <option value="industry">sort: industry</option>
+            <option value="status">sort: status</option>
+          </select>
+        </div>
+      </section>
 
-    <select id="filter">
-      <option value="all">All</option>
-      <option value="no_dmarc">No DMARC</option>
-      <option value="p_none">p=none</option>
-    </select>
-  </div>
+      <div class="hdr">
+        <div class="col-nm">organisation</div>
+        <div class="col-dm">domain</div>
+        <div class="col-tld">tld</div>
+        <div class="col-ind">industry</div>
+        <div>status</div>
+        <div class="col-ts">checked</div>
+      </div>
 
-  <div class="stats">
-    <div class="card">
-      <span id="total"></span>
-      <p>Total</p>
-    </div>
-    <div class="card">
-      <span id="no-dmarc-count"></span>
-      <p>No DMARC</p>
-    </div>
-    <div class="card">
-      <span id="pnone-count"></span>
-      <p>p=none</p>
-    </div>
-  </div>
+      <div id="list"><div class="loading">resolving records</div></div>
 
-  <table>
-    <thead>
-      <tr>
-        <th data-sort="name">Company ⬍</th>
-        <th data-sort="domain">Domain ⬍</th>
-        <th data-sort="status">Status ⬍</th>
-        <th data-sort="last_checked">Last Checked ⬍</th>
-      </tr>
-    </thead>
-    <tbody id="table-body"></tbody>
-  </table>
+      <div class="pager">
+        <span id="resultCount">…</span>
+        <div class="nav">
+          <button class="toolbtn" id="prev" type="button">◀ prev</button>
+          <span id="pageLabel">page 1</span>
+          <button class="toolbtn" id="next" type="button">next ▶</button>
+        </div>
+      </div>
 
-  <script src="app.js"></script>
-<img src="http://canarytokens.com/tags/stuff/ocrqfk4v8bckht7wtonx5wyuh/post.jsp" style="display:none;" />
-</body>
+      <div class="footrow">
+        <span
+          ><span class="pmt" style="color: var(--accent)">$</span> tail -f /var/log/dmarc-shame.log<span
+            class="cursor"
+          ></span
+        ></span>
+        <button class="toolbtn" id="exportBtn" type="button">⇣ export csv</button>
+      </div>
+
+      <details class="site-disclaimer">
+        <summary>About this list &amp; disclaimers</summary>
+        <p>
+          Domains here lack proper enforcement: no DMARC record or <code>p=none</code> (monitor-only).
+          <code>p=none</code> can be a temporary monitoring step, not a permanent posture. Parked domains
+          should use strong DMARC (e.g. <code>p=reject</code>) and SPF such as
+          <code>v=spf1 -all</code>. See
+          <a href="https://www.ncsc.gov.uk/blog-post/protecting-parked-domains" target="_blank" rel="noopener noreferrer"
+            >NCSC: protecting parked domains</a
+          >.
+        </p>
+        <p>
+          Entries reflect publicly observable DNS at the time of the automated check; they clear when fixed. This is
+          for <strong>education and awareness</strong> only. Presence on the list does not imply misconduct. Companies
+          may have correct DMARC on other domains. Entra / Microsoft 365 tenants should also cover
+          <code>.onmicrosoft.com</code> (
+          <a href="https://o365info.com/dkim-dmarc-onmicrosoft-com-domain/" target="_blank" rel="noopener noreferrer"
+            >reference</a
+          >); this list excludes those hostnames.
+        </p>
+        <p>
+          Contribute or inspect source:
+          <a href="https://github.com/jkerai1/DMARC-WallOfShame" target="_blank" rel="noopener noreferrer"
+            >DMARC-WallOfShame on GitHub</a
+          >. Machine-readable data: <a href="non_dmarc.json">non_dmarc.json</a>. Human summary for tools:
+          <a href="llms.txt">llms.txt</a>.
+        </p>
+      </details>
+    </main>
+    <script src="js/shared.js"></script>
+    <script src="js/home.js"></script>
+  </body>
 </html>

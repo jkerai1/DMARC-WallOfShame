@@ -1,0 +1,11 @@
+# DMARC Wall of Shame (dmarcwallofshame.org)
+
+Public, educational project that lists domains observed to lack strong DMARC enforcement:
+either no DMARC TXT record at `_dmarc.<domain>`, or a record with `p=none` (monitor-only).
+
+The site is not an accusation of wrongdoing; entries come from automated DNS checks (GitHub Actions)
+and can change when DNS is fixed. Companion JSON dataset: /non_dmarc.json
+
+Home page surfable list with filters; /dmarc-check.html is a browser DMARC lookup via DNS-over-HTTPS.
+
+Source and contribution policy: https://github.com/jkerai1/DMARC-WallOfShame

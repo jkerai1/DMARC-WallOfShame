@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DMARC checker (DNS-over-HTTPS) — DMARC Wall of Shame</title>
+    <meta
+      name="description"
+      content="Look up _dmarc TXT for any domain via Cloudflare DNS-over-HTTPS. See if policy is reject, quarantine, none, or missing — free browser tool, no log."
+    />
+    <link rel="canonical" href="https://dmarcwallofshame.org/dmarc-check.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DMARC Wall of Shame" />
+    <meta property="og:title" content="DMARC policy checker (DoH)" />
+    <meta
+      property="og:description"
+      content="Inspect _dmarc TXT records in the browser. Understand reject vs quarantine vs p=none vs no record."
+    />
+    <meta property="og:url" content="https://dmarcwallofshame.org/dmarc-check.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DMARC policy checker (DoH)" />
+    <meta
+      name="twitter:description"
+      content="Inspect _dmarc TXT records in the browser using DNS-over-HTTPS."
+    />
+    <meta name="theme-color" content="#0c0d0a" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dmarc-check.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "DMARC Wall of Shame — domain checker",
+        "url": "https://dmarcwallofshame.org/dmarc-check.html",
+        "description": "Client-side DMARC record lookup via DNS-over-HTTPS (Cloudflare). Parses v=DMARC1 policy tags and explains enforcement posture.",
+        "applicationCategory": "SecurityApplication",
+        "browserRequirements": "Requires JavaScript. Uses public DNS-over-HTTPS API.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "DMARC Wall of Shame",
+          "url": "https://dmarcwallofshame.org/"
+        }
+      }
+    </script>
+  </head>
+  <body data-theme="dark">
+    <div class="scan"></div>
+    <main class="wrap">
+      <h1 class="sr-only">DMARC policy checker</h1>
+      <div class="topbar">
+        <div class="left">
+          <span class="dot"></span>
+          <span class="path">~ / wall-of-shame / <b>dmarc_check.sh</b></span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <a class="back-btn" href="index.html">◀ back to wall</a>
+          <button class="iconbtn" id="themeBtn" type="button" title="Toggle theme">◐</button>
+        </div>
+      </div>
+
+      <section class="term-window" aria-label="Terminal-style checker">
+        <div class="term-chrome">
+          <span class="tlight r"></span><span class="tlight y"></span><span class="tlight g"></span>
+          <span class="title">dmarc_check — bash — 1080×600</span>
+        </div>
+        <div class="term-body" id="termBody">
+          <span class="session-line" id="bootLine"></span>
+        </div>
+      </section>
+
+      <div class="help" id="help">
+        <h2>// what this tool does</h2>
+        <p>
+          Resolves <code>_dmarc.&lt;your-domain&gt;</code> via Cloudflare's DNS-over-HTTPS resolver, parses the published
+          policy, and tells you whether your inbox is currently <span class="ok">enforced</span>, merely
+          <span class="wn">monitored</span>, or <span class="hl">unprotected</span>. Nothing is logged in this UI.
+        </p>
+        <p>
+          Tags decoded: <b>p=</b> policy · <b>sp=</b> subdomain policy · <b>pct=</b> percent enforced ·
+          <b>rua/ruf=</b> aggregate / forensic report addresses · <b>adkim/aspf=</b> alignment mode.
+        </p>
+      </div>
+    </main>
+    <script src="js/dmarc-check.js"></script>
+  </body>
+</html>

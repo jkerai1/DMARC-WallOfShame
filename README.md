@@ -12,7 +12,7 @@ Tracks domains that:
 
 - Daily GitHub Action checks domains. If the company remediates then they get cleared down.
 - Updates `docs/non_dmarc.json`
-- GitHub Pages displays results
+- GitHub Pages serves the console UI from `docs/index.html` with styles in `docs/css/home.css` and scripts in `docs/js/` (`shared.js`, `home.js`). The browser DMARC checker lives at `docs/dmarc-check.html`.
 
 ## Contributing
 
