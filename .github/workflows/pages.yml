@@ -19,21 +19,23 @@ concurrency:
 
 jobs:
   deploy:
+    name: Publish GitHub Pages (docs/)
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v6
+      - name: Check out repository
+        uses: actions/checkout@v6
 
-      - name: Setup Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
-      - name: Upload artifact
+      - name: Upload docs/ as Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./docs
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

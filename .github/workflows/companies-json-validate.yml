@@ -1,0 +1,29 @@
+name: Validate companies.json
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/companies.json"
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  validate:
+    name: Validate companies.json shape (PR)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Validate JSON structure and required fields
+        run: node scripts/validate_companies_json.mjs

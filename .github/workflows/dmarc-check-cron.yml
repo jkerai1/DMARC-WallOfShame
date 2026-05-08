@@ -1,0 +1,48 @@
+name: DMARC Check (scheduled)
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # daily refresh on default branch
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  check:
+    name: Audit DMARC records and refresh site data
+    runs-on: ubuntu-latest
+    env:
+      UV_THREADPOOL_SIZE: 256
+      DMARC_DNS_SERVERS: "1.1.1.1,8.8.8.8"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Run bulk DMARC resolution (write docs/non_dmarc.json)
+        run: node scripts/check_dmarc.mjs
+
+      - name: Upload non_dmarc.json as workflow artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: non_dmarc-json
+          path: docs/non_dmarc.json
+
+      - name: Commit and push non_dmarc.json if changed
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git diff --quiet || (
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git add docs/non_dmarc.json
+            git commit -m "Update DMARC status"
+            git push
+          )

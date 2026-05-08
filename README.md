@@ -1,4 +1,4 @@
-# DMARC-WallOfShame [![Deploy Pages](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/pages.yml/badge.svg)](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/pages.yml) [![DMARC Check](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/dmarc-check-js.yml/badge.svg)](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/dmarc-check-js.yml)
+# DMARC-WallOfShame [![Deploy Pages](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/pages.yml/badge.svg)](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/pages.yml) [![DMARC Check (scheduled)](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/dmarc-check-cron.yml/badge.svg)](https://github.com/jkerai1/DMARC-WallOfShame/actions/workflows/dmarc-check-cron.yml)
 List of companies who do not implement DMARC controls to keep their own organisation and their customers safe with DMARC. ```p=none``` is a temporary measure and your domain should not be ```p=none``` forever. 
 
 > [!TIP]
