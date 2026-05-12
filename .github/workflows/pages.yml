@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["DMARC Check (scheduled)", "DMARC Check (companies.json on main)"]
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
