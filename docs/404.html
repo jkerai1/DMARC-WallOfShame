@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found — DMARC Wall of Shame</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0c0d0a" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/site.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="scan" aria-hidden="true"></div>
+    <main class="wrap" aria-labelledby="pageTitle">
+      <div class="topbar">
+        <div class="left">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="path" aria-hidden="true">~ / wall-of-shame / <b>404</b></span>
+        </div>
+        <div class="top-actions">
+          <a class="back-btn" href="/">home</a>
+          <a class="back-btn" href="/dmarc-check.html">checker</a>
+          <button class="iconbtn" id="themeBtn" type="button" title="Toggle theme" aria-label="Toggle theme">◐</button>
+        </div>
+      </div>
+
+      <section class="term-window" aria-labelledby="pageTitle">
+        <div class="term-chrome" aria-hidden="true">
+          <span class="tlight r"></span><span class="tlight y"></span><span class="tlight g"></span>
+          <span class="title">404 — bash — route not found</span>
+        </div>
+        <div class="term-body">
+          <h1 id="pageTitle">404 · page not found</h1>
+          <span class="session-line"><span class="pmt">$</span> resolve current_path</span>
+          <span class="session-line"><span class="hl">[err]</span> no matching document in this static site</span>
+          <p>
+            The page may have moved, or the URL may be wrong. The wall and checker are still available.
+          </p>
+          <div class="actions">
+            <a href="/">back to the wall</a>
+            <a href="/dmarc-check.html">open checker</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/js/shared.js"></script>
+  </body>
+</html>
