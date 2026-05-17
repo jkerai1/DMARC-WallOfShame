@@ -86,7 +86,7 @@ input:focus-visible,
 select:focus-visible,
 summary:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 1px solid var(--ink-mute);
   outline-offset: 2px;
 }
 .site-disclaimer {
@@ -370,7 +370,7 @@ summary:focus-visible,
   caret-color: var(--accent);
 }
 .input input:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 1px solid var(--ink-mute);
   outline-offset: 2px;
 }
 .seg {
@@ -415,7 +415,7 @@ summary:focus-visible,
   scroll-margin-top: 8px;
 }
 .results-table:focus {
-  outline: 2px solid var(--accent);
+  outline: 1px solid var(--ink-mute);
   outline-offset: 3px;
 }
 .results-table thead th {
@@ -710,7 +710,7 @@ summary:focus-visible,
   border-color: var(--accent);
 }
 .check-form input:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 1px solid var(--ink-mute);
   outline-offset: 2px;
 }
 .check-form button {
@@ -803,7 +803,7 @@ summary:focus-visible,
   color: var(--ink);
 }
 .verdict:focus {
-  outline: 2px solid var(--accent);
+  outline: 1px solid var(--ink-mute);
   outline-offset: 2px;
 }
 
