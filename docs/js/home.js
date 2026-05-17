@@ -17,6 +17,7 @@
   const state = { q: "", status: "all", tld: "", industry: "", sort: "az", page: 1 };
 
   window.setupTheme("themeBtn");
+  const listEl = $("list");
 
   /* ---------- Fake CLI session: timed lines for atmosphere ---------- */
   const sessionEl = $("session");
@@ -45,7 +46,8 @@
     try {
       data = await window.fetchDmarcData();
     } catch (e) {
-      $("list").innerHTML = '<tr><td class="empty" colspan="6">connection error · retry</td></tr>';
+      listEl.innerHTML = '<tr><td class="empty" colspan="6">connection error · retry</td></tr>';
+      listEl.setAttribute("aria-busy", "false");
       return;
     }
 
@@ -149,24 +151,31 @@
       $("prev").disabled = state.page <= 1;
       $("next").disabled = state.page >= pages;
       $("exportBtn").disabled = total === 0;
+      $("prev").setAttribute("aria-label", state.page <= 1 ? "Previous page unavailable" : `Go to page ${state.page - 1}`);
+      $("next").setAttribute("aria-label", state.page >= pages ? "Next page unavailable" : `Go to page ${state.page + 1}`);
+      $("exportBtn").setAttribute("aria-label", total === 0 ? "Export unavailable because there are no matches" : "Export current filtered results as CSV");
       if (!slice.length) {
-        $("list").innerHTML = '<tr><td class="empty" colspan="6">// no matches</td></tr>';
+        listEl.innerHTML = '<tr><td class="empty" colspan="6">// no matches</td></tr>';
+        listEl.setAttribute("aria-busy", "false");
         return;
       }
-      $("list").innerHTML = slice
+      listEl.innerHTML = slice
         .map((d) => {
           const cls = d.status === "no_dmarc" ? "no" : "pn";
           const indCls = d.industry ? "" : "empty";
+          const statusLabel = window.statusLabel(d.status);
+          const statusShort = window.statusShort(d.status);
           return `<tr class="row">
-        <td class="nm">${window.escapeHtml(d.name || "")}</td>
+        <th class="nm" scope="row">${window.escapeHtml(d.name || "")}</th>
         <td class="dm">${window.escapeHtml(d.domain || "")}</td>
         <td class="tld">${window.escapeHtml(window.tldOf(d.domain))}</td>
         <td class="ind ${indCls}">${window.escapeHtml(d.industry || "")}</td>
-        <td><span class="st ${cls}">${window.escapeHtml(window.statusShort(d.status))}</span></td>
+        <td><span class="st ${cls}"><span aria-hidden="true">${window.escapeHtml(statusShort)}</span><span class="sr-only">${window.escapeHtml(statusLabel)}</span></span></td>
         <td class="ts">${window.formatDate(d.last_checked)}</td>
       </tr>`;
         })
         .join("");
+      listEl.setAttribute("aria-busy", "false");
     }
 
     /* Collapsible filter panel + badge when non-default filters active */
@@ -192,8 +201,12 @@
     });
     document.querySelectorAll("#statusSeg button").forEach((b) => {
       b.onclick = () => {
-        document.querySelectorAll("#statusSeg button").forEach((x) => x.classList.remove("on"));
+        document.querySelectorAll("#statusSeg button").forEach((x) => {
+          x.classList.remove("on");
+          x.setAttribute("aria-pressed", "false");
+        });
         b.classList.add("on");
+        b.setAttribute("aria-pressed", "true");
         state.status = b.dataset.v;
         state.page = 1;
         render();

@@ -27,7 +27,12 @@ window.setupTheme = function (buttonId) {
 
   function setTheme(t) {
     document.body.dataset.theme = t;
-    if (themeBtn) themeBtn.textContent = t === "dark" ? "☀" : "◐";
+    if (themeBtn) {
+      themeBtn.textContent = t === "dark" ? "☀" : "◐";
+      themeBtn.title = t === "dark" ? "Switch to light theme" : "Switch to dark theme";
+      themeBtn.setAttribute("aria-label", "Dark theme");
+      themeBtn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
+    }
     try {
       localStorage.setItem("cn_theme", t);
     } catch (e) {

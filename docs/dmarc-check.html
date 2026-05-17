@@ -56,44 +56,61 @@
     </script>
   </head>
   <body data-theme="dark">
-    <div class="scan"></div>
-    <main class="wrap">
-      <h1 class="sr-only">DMARC policy checker</h1>
+    <a class="skip-link" href="#domainInput">Skip to checker</a>
+    <div class="scan" aria-hidden="true"></div>
+    <main class="wrap" aria-labelledby="checkerTitle">
+      <h1 class="sr-only" id="checkerTitle">DMARC policy checker</h1>
       <div class="topbar">
         <div class="left">
-          <span class="dot"></span>
-          <span class="path">~ / wall-of-shame / <b>dmarc_check.sh</b></span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="path" aria-hidden="true">~ / wall-of-shame / <b>dmarc_check.sh</b></span>
         </div>
         <div class="top-actions">
           <a class="back-btn" href="index.html">◀ back to wall</a>
-          <button class="iconbtn" id="themeBtn" type="button" title="Toggle theme">◐</button>
+          <button class="iconbtn" id="themeBtn" type="button" title="Toggle theme" aria-label="Toggle theme">◐</button>
         </div>
       </div>
 
-      <section class="term-window" aria-label="Terminal-style checker">
-        <div class="term-chrome">
+      <section class="term-window" aria-labelledby="terminalTitle">
+        <h2 class="sr-only" id="terminalTitle">Run a DMARC lookup</h2>
+        <div class="term-chrome" aria-hidden="true">
           <span class="tlight r"></span><span class="tlight y"></span><span class="tlight g"></span>
           <span class="title">dmarc_check — bash — 1080×600</span>
         </div>
         <div class="term-body" id="termBody">
-          <span class="session-line"><span class="pmt">$</span> ./dmarc_check.sh</span>
-          <span class="session-line"><span class="ok">[ok]</span> resolver: 1.1.1.1 (DoH)</span>
-
-          <form id="checkForm" class="check-form">
-            <span class="dollar">$</span>
-            <input id="domainInput" type="text" placeholder="example.com" autocomplete="off" spellcheck="false" />
-            <button type="submit" id="runBtn">run check</button>
-          </form>
-
-          <div class="quick" id="quickPicks">
-            <span class="mute">try:</span>
-            <button type="button" class="chip" data-d="google.com">google.com</button>
-            <button type="button" class="chip" data-d="github.com">github.com</button>
-            <button type="button" class="chip" data-d="bbc.co.uk">bbc.co.uk</button>
-            <button type="button" class="chip" data-d="apache.org">apache.org</button>
+          <div aria-hidden="true">
+            <span class="session-line"><span class="pmt">$</span> ./dmarc_check.sh</span>
+            <span class="session-line"><span class="ok">[ok]</span> resolver: 1.1.1.1 (DoH)</span>
           </div>
 
-          <div class="result-area" id="resultArea" aria-live="polite"></div>
+          <form id="checkForm" class="check-form">
+            <span class="dollar" aria-hidden="true">$</span>
+            <label class="sr-only" for="domainInput">Domain to check</label>
+            <input
+              id="domainInput"
+              type="text"
+              placeholder="example.com"
+              autocomplete="off"
+              spellcheck="false"
+              inputmode="url"
+              aria-describedby="domainHelp"
+              aria-errormessage="domainError"
+              aria-invalid="false"
+            />
+            <button type="submit" id="runBtn" aria-controls="resultArea">run check</button>
+          </form>
+          <p class="sr-only" id="domainHelp">Enter a domain such as example.com, without a path or email address.</p>
+          <p class="sr-only" id="domainError"></p>
+
+          <div class="quick" id="quickPicks" role="group" aria-label="Example domains">
+            <span class="mute">try:</span>
+            <button type="button" class="chip" data-d="google.com" aria-label="Check google.com">google.com</button>
+            <button type="button" class="chip" data-d="github.com" aria-label="Check github.com">github.com</button>
+            <button type="button" class="chip" data-d="bbc.co.uk" aria-label="Check bbc.co.uk">bbc.co.uk</button>
+            <button type="button" class="chip" data-d="apache.org" aria-label="Check apache.org">apache.org</button>
+          </div>
+
+          <div class="result-area" id="resultArea" role="status" aria-live="polite" aria-busy="false"></div>
         </div>
       </section>
 

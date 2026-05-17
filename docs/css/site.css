@@ -54,6 +54,31 @@ body {
   white-space: nowrap;
   border: 0;
 }
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  transform: translateY(-160%);
+  background: var(--accent);
+  color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .site-disclaimer {
   margin-top: 24px;
   padding: 14px 16px;
@@ -334,6 +359,10 @@ body {
   padding: 4px 0;
   caret-color: var(--accent);
 }
+.input input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .seg {
   display: flex;
   border: 1px solid var(--line);
@@ -371,7 +400,11 @@ body {
   line-height: 1.2;
   scroll-margin-top: 8px;
 }
-.results-table th {
+.results-table:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.results-table thead th {
   color: var(--ink-mute);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -404,9 +437,15 @@ body {
 .results-table .col-ts {
   width: 90px;
 }
+.row th,
 .row td {
   border-bottom: 1px solid var(--line);
 }
+.row th {
+  font-weight: 400;
+  text-align: left;
+}
+.row:hover th,
 .row:hover td {
   background: var(--bg2);
 }
@@ -642,6 +681,10 @@ body {
 .check-form input:focus {
   border-color: var(--accent);
 }
+.check-form input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .check-form button {
   background: var(--accent);
   color: var(--bg);
@@ -682,6 +725,10 @@ body {
 .quick .chip:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+.quick .chip:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 .result-area {
   margin-top: 14px;
@@ -726,6 +773,10 @@ body {
 }
 .verdict p b {
   color: var(--ink);
+}
+.verdict:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .record-box {
@@ -875,14 +926,14 @@ body {
   .results-table .col-dm {
     width: 36%;
   }
-  .results-table th,
+  .results-table thead th,
   .results-table td {
     padding: 2px 6px;
   }
   .results-table .col-tld {
     width: 52px;
   }
-  .results-table th:nth-child(5),
+  .results-table thead th:nth-child(5),
   .results-table td:nth-child(5) {
     width: 76px;
   }
@@ -952,7 +1003,7 @@ body {
   .results-table {
     font-size: 12px;
   }
-  .results-table th {
+  .results-table thead th {
     font-size: 10px;
   }
   .row .st {

@@ -68,24 +68,26 @@
     </script>
   </head>
   <body data-theme="dark">
-    <div class="scan"></div>
-    <main class="term">
-      <h1 class="sr-only">DMARC Wall of Shame</h1>
+    <a class="skip-link" href="#resultsTable">Skip to results</a>
+    <div class="scan" aria-hidden="true"></div>
+    <main class="term" aria-labelledby="pageTitle">
+      <h1 class="sr-only" id="pageTitle">DMARC Wall of Shame</h1>
       <div class="bar">
         <div class="left">
-          <span class="dot"></span>
-          <span class="path">~ / wall-of-shame / <b>domains.json</b></span>
-          <button class="iconbtn theme-inline" id="themeBtn" type="button" title="Toggle theme">◐</button>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="path" aria-hidden="true">~ / wall-of-shame / <b>domains.json</b></span>
+          <button class="iconbtn theme-inline" id="themeBtn" type="button" title="Toggle theme" aria-label="Toggle theme">◐</button>
         </div>
         <div class="right-actions">
           <span class="pill"
-            ><span class="live-dot"></span> Live · <b id="lastChecked">—</b></span
+            ><span class="live-dot" aria-hidden="true"></span> Live · <b id="lastChecked">—</b></span
           >
-          <a class="launch-btn" href="dmarc-check.html">▶ check_my_domain.sh</a>
+          <a class="launch-btn" href="dmarc-check.html" aria-label="Open DMARC domain checker">▶ check_my_domain.sh</a>
           <a
             class="launch-btn"
             href="https://github.com/jkerai1/DMARC-WallOfShame"
             rel="me external noopener noreferrer"
+            aria-label="Open project repository"
             >repo</a
           >
         </div>
@@ -101,43 +103,52 @@
    wall · of · shame      [public audit log]
     </pre>
 
-      <div class="session" id="session"></div>
+      <div class="session" id="session" aria-hidden="true"></div>
 
-      <section class="grid">
-        <div class="cell">
-          <div class="k">total_records</div>
+      <section class="grid" aria-labelledby="statsTitle">
+        <h2 class="sr-only" id="statsTitle">Dataset summary</h2>
+        <div class="cell" role="group" aria-labelledby="stTotalLabel" aria-describedby="stTotal">
+          <div class="k" id="stTotalLabel">total_records</div>
           <div class="v" id="stTotal">—</div>
         </div>
-        <div class="cell s">
-          <div class="k">no_dmarc</div>
+        <div class="cell s" role="group" aria-labelledby="stNoLabel" aria-describedby="stNo">
+          <div class="k" id="stNoLabel">no_dmarc</div>
           <div class="v" id="stNo">—</div>
         </div>
-        <div class="cell w">
-          <div class="k">policy=none</div>
+        <div class="cell w" role="group" aria-labelledby="stPLabel" aria-describedby="stP">
+          <div class="k" id="stPLabel">policy=none</div>
           <div class="v" id="stP">—</div>
         </div>
       </section>
 
-      <section class="controls" id="controls">
+      <section class="controls" id="controls" aria-labelledby="filtersTitle">
+        <h2 class="sr-only" id="filtersTitle">Search and filter results</h2>
         <label class="input">
-          <input id="q" placeholder="grep -i 'name|domain|.tld|industry' …" autocomplete="off" />
+          <span class="sr-only">Search by organisation, domain, TLD, or industry</span>
+          <input
+            id="q"
+            type="search"
+            placeholder="grep -i 'name|domain|.tld|industry' …"
+            autocomplete="off"
+            aria-controls="resultsTable resultCount"
+          />
         </label>
-        <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false">
-          <span class="dotbadge"></span> filters ▾
+        <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterPanel">
+          <span class="dotbadge" aria-hidden="true"></span> filters ▾
         </button>
-        <div class="filters">
-          <div class="seg" id="statusSeg">
-            <button type="button" data-v="all" class="on">all</button>
-            <button type="button" data-v="no_dmarc">no_dmarc</button>
-            <button type="button" data-v="p_none">p=none</button>
+        <div class="filters" id="filterPanel">
+          <div class="seg" id="statusSeg" role="group" aria-label="Filter by DMARC status">
+            <button type="button" data-v="all" class="on" aria-pressed="true">all</button>
+            <button type="button" data-v="no_dmarc" aria-pressed="false">no_dmarc</button>
+            <button type="button" data-v="p_none" aria-pressed="false">p=none</button>
           </div>
-          <select class="select" id="tldSel" aria-label="Filter by TLD">
+          <select class="select" id="tldSel" aria-label="Filter results by TLD" aria-controls="resultsTable resultCount">
             <option value="">tld: any</option>
           </select>
-          <select class="select" id="indSel" aria-label="Filter by industry">
+          <select class="select" id="indSel" aria-label="Filter results by industry" aria-controls="resultsTable resultCount">
             <option value="">industry: any</option>
           </select>
-          <select class="select" id="sortSel" aria-label="Sort list">
+          <select class="select" id="sortSel" aria-label="Sort results" aria-controls="resultsTable">
             <option value="az">sort: name ↑</option>
             <option value="za">sort: name ↓</option>
             <option value="tld">sort: tld</option>
@@ -147,7 +158,10 @@
         </div>
       </section>
 
-      <table class="results-table">
+      <table class="results-table" id="resultsTable" tabindex="-1" aria-describedby="resultCount pageLabel">
+        <caption class="sr-only">
+          Domains without DMARC enforcement matching the current filters.
+        </caption>
         <thead>
           <tr>
             <th class="col-nm" scope="col">organisation</th>
@@ -158,29 +172,29 @@
             <th class="col-ts" scope="col">checked</th>
           </tr>
         </thead>
-        <tbody id="list">
+        <tbody id="list" aria-busy="true">
           <tr>
             <td class="loading" colspan="6">resolving records</td>
           </tr>
         </tbody>
       </table>
 
-      <div class="pager">
-        <span id="resultCount" aria-live="polite">…</span>
-        <div class="nav">
-          <button class="toolbtn" id="prev" type="button">◀ prev</button>
+      <div class="pager" role="group" aria-label="Results pagination">
+        <span id="resultCount" role="status" aria-live="polite">…</span>
+        <nav class="nav" aria-label="Results pages">
+          <button class="toolbtn" id="prev" type="button" aria-controls="resultsTable">◀ prev</button>
           <span id="pageLabel" aria-live="polite">page 1</span>
-          <button class="toolbtn" id="next" type="button">next ▶</button>
-        </div>
+          <button class="toolbtn" id="next" type="button" aria-controls="resultsTable">next ▶</button>
+        </nav>
       </div>
 
       <div class="footrow">
-        <span
+        <span aria-hidden="true"
           ><span class="pmt">$</span> tail -f /var/log/dmarc-shame.log<span
             class="cursor"
           ></span
         ></span>
-        <button class="toolbtn" id="exportBtn" type="button">⇣ export csv</button>
+        <button class="toolbtn" id="exportBtn" type="button" aria-controls="resultsTable">⇣ export csv</button>
       </div>
 
       <details class="site-disclaimer">

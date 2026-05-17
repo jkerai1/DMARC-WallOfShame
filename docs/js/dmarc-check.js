@@ -13,6 +13,7 @@
   const runBtn = $("runBtn");
   const quickPicks = $("quickPicks");
   const resultArea = $("resultArea");
+  const domainError = $("domainError");
 
   setTimeout(() => input.focus(), 80);
 
@@ -47,10 +48,17 @@
   function disableForm(disabled) {
     input.disabled = disabled;
     runBtn.disabled = disabled;
+    quickPicks.querySelectorAll("button").forEach((button) => {
+      button.disabled = disabled;
+    });
     runBtn.textContent = disabled ? "running ..." : "run check";
   }
 
   function showError(message) {
+    input.setAttribute("aria-invalid", "true");
+    domainError.textContent = message;
+    resultArea.setAttribute("aria-busy", "false");
+    resultArea.setAttribute("role", "alert");
     resultArea.innerHTML = `<span class="session-line"><span class="hl">[err]</span> ${escapeHtml(message)}</span>`;
   }
 
@@ -66,6 +74,10 @@
   }
 
   async function runCheck(domain) {
+    input.setAttribute("aria-invalid", "false");
+    domainError.textContent = "";
+    resultArea.setAttribute("role", "status");
+    resultArea.setAttribute("aria-busy", "true");
     disableForm(true);
     resultArea.innerHTML = "";
     appendLine(
@@ -202,7 +214,10 @@
   function finishVerdict(domain, cls, head, msgHtml, record, tags) {
     const v = document.createElement("div");
     v.className = "verdict " + cls;
-    v.innerHTML = `<h3>${escapeHtml(head)}</h3><p>${msgHtml}</p>`;
+    v.setAttribute("role", "region");
+    v.setAttribute("aria-labelledby", "verdictTitle");
+    v.tabIndex = -1;
+    v.innerHTML = `<h3 id="verdictTitle">${escapeHtml(head)}</h3><p>${msgHtml}</p>`;
     resultArea.appendChild(v);
 
     if (record) {
@@ -215,6 +230,7 @@
     if (tags.length) {
       const row = document.createElement("div");
       row.className = "tags-row";
+      row.setAttribute("aria-label", "DMARC record tags");
       row.innerHTML = tags
         .map((t) => {
           const c = t.cls ? " " + t.cls : "";
@@ -234,7 +250,11 @@
     $("againBtn").onclick = () => {
       resultArea.innerHTML = "";
       input.value = "";
+      input.setAttribute("aria-invalid", "false");
+      domainError.textContent = "";
       input.focus();
     };
+    resultArea.setAttribute("aria-busy", "false");
+    v.focus();
   }
 })();
