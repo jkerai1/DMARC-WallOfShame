@@ -523,7 +523,14 @@ summary:focus-visible,
 }
 .pager .nav {
   display: flex;
+  align-items: center;
   gap: 6px;
+}
+.pager #pageLabel {
+  display: inline-flex;
+  align-items: center;
+  min-height: calc(1em + 10px);
+  white-space: nowrap;
 }
 .toolbtn {
   background: transparent;
