@@ -100,9 +100,11 @@
 
     let record = null;
     try {
-      const lookup = fetchDmarcRecord(domain);
-      if (!window.prefersReducedMotion()) await wait(500);
-      record = await lookup;
+      if (window.prefersReducedMotion()) {
+        record = await fetchDmarcRecord(domain);
+      } else {
+        [record] = await Promise.all([fetchDmarcRecord(domain), wait(500)]);
+      }
     } catch (e) {
       appendLine(`<span class="hl">[err]</span> resolver error: ${escapeHtml(e.message)}`);
       finishVerdict(
@@ -150,7 +152,17 @@
 
   async function fetchDmarcRecord(domain) {
     const url = `https://cloudflare-dns.com/dns-query?name=_dmarc.${encodeURIComponent(domain)}&type=TXT`;
-    const r = await fetch(url, { headers: { accept: "application/dns-json" } });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    let r;
+    try {
+      r = await fetch(url, { headers: { accept: "application/dns-json" }, signal: controller.signal });
+    } catch (e) {
+      if (e.name === "AbortError") throw new Error("DNS lookup timed out");
+      throw e;
+    } finally {
+      clearTimeout(timeout);
+    }
     if (!r.ok) throw new Error("HTTP " + r.status);
 
     const j = await r.json();

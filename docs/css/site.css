@@ -70,6 +70,16 @@ body {
 .skip-link:focus {
   transform: translateY(0);
 }
+.noscript {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 10px 14px;
+  border: 1px solid var(--warn);
+  background: var(--bg2);
+  color: var(--ink);
+}
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,

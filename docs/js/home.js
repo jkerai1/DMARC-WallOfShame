@@ -47,8 +47,9 @@
     try {
       data = await window.fetchDmarcData();
     } catch (e) {
-      listEl.innerHTML = '<tr><td class="empty" colspan="6">connection error · retry</td></tr>';
+      listEl.innerHTML = '<tr><td class="empty" colspan="6">connection error · <button class="toolbtn" id="retryData" type="button">retry</button></td></tr>';
       listEl.setAttribute("aria-busy", "false");
+      $("retryData").onclick = () => window.location.reload();
       return;
     }
 
