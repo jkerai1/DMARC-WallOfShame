@@ -30,29 +30,6 @@
   setTheme(localStorage.getItem("cn_theme") || "dark");
   themeBtn.onclick = () => setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
 
-  /* ---------- Fake CLI session: timed lines for atmosphere ---------- */
-  const sessionEl = $("session");
-  const lines = [
-    { txt: '<span class="pmt">$</span> ./audit.sh --scope global --policy missing,none', delay: 0 },
-    { txt: '<span class="ok">[ok]</span> connecting to dns resolvers …', delay: 280 },
-    { txt: '<span class="ok">[ok]</span> querying _dmarc.* TXT records', delay: 280 },
-    { txt: '<span class="hl">[!!]</span> domains with no DMARC record detected', delay: 320 },
-    { txt: '<span class="wn">[!]</span> domains with p=none policy detected', delay: 280 },
-    { txt: '<span class="ok">[ok]</span> stream open · <span class="cursor"></span>', delay: 280, keepCursor: true },
-  ];
-  let i = 0;
-  function nextLine() {
-    if (i >= lines.length) return;
-    const ln = document.createElement("span");
-    ln.className = "ln";
-    ln.innerHTML = lines[i].txt;
-    sessionEl.appendChild(ln);
-    sessionEl.querySelectorAll(".ln:not(:last-child) .cursor").forEach((n) => n.remove());
-    i++;
-    if (i < lines.length) setTimeout(nextLine, lines[i].delay);
-  }
-  setTimeout(nextLine, 200);
-
   (async () => {
     try {
       data = await window.fetchDmarcData();
