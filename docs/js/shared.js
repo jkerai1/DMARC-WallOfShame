@@ -1,31 +1,53 @@
 /**
- * Shared utilities and data loading for DMARC Wall of Shame (home + tools).
+ * Shared browser helpers for DMARC Wall of Shame pages.
  * Loaded before page-specific scripts; exposes helpers on `window`.
  */
 
 /** @type {string} Relative URL for the JSON dataset (domains with weak/missing DMARC). */
 window.DMARC_DATA_URL = "non_dmarc.json";
 
+/** Escapes text before inserting into HTML template literals. */
+window.escapeHtml = function (s) {
+  return String(s).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+  );
+};
+
+/** Applies the persisted light/dark theme and wires the theme toggle button. */
+window.setupTheme = function (buttonId) {
+  const themeBtn = document.getElementById(buttonId);
+
+  function getSavedTheme() {
+    try {
+      return localStorage.getItem("cn_theme");
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function setTheme(t) {
+    document.body.dataset.theme = t;
+    if (themeBtn) themeBtn.textContent = t === "dark" ? "☀" : "◐";
+    try {
+      localStorage.setItem("cn_theme", t);
+    } catch (e) {
+      /* storage unavailable */
+    }
+  }
+
+  setTheme(getSavedTheme() || "dark");
+  if (themeBtn) {
+    themeBtn.onclick = () => setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+  }
+};
+
 /**
- * Fetches the domain list, deduplicates by domain (case-insensitive), and caches in sessionStorage.
- * Second visit in the same tab avoids a network round-trip when cache is valid.
- * Cached rows must include `industry`; older caches are ignored so schema changes self-heal.
+ * Fetches the domain list and deduplicates by domain (case-insensitive).
  *
  * @returns {Promise<Array<{ domain: string, name?: string, status?: string, last_checked?: string }>>}
  * @throws {Error} When HTTP fetch fails (non-OK status).
  */
 window.fetchDmarcData = async function () {
-  const cached = sessionStorage.getItem("dmarc_data");
-  if (cached) {
-    try {
-      const parsed = JSON.parse(cached);
-      if (Array.isArray(parsed) && parsed.length && parsed.every((r) => r && typeof r === "object" && "industry" in r)) {
-        return parsed;
-      }
-    } catch (e) {
-      /* ignore corrupt cache; refetch below */
-    }
-  }
   const res = await fetch(window.DMARC_DATA_URL);
   if (!res.ok) throw new Error("Failed to load data");
   const data = await res.json();
@@ -36,13 +58,7 @@ window.fetchDmarcData = async function () {
     if (!key) continue;
     if (!seen.has(key)) seen.set(key, r);
   }
-  const cleaned = Array.from(seen.values());
-  try {
-    sessionStorage.setItem("dmarc_data", JSON.stringify(cleaned));
-  } catch (e) {
-    /* private mode / quota: still return data */
-  }
-  return cleaned;
+  return Array.from(seen.values());
 };
 
 /**

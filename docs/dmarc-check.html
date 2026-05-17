@@ -32,7 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/dmarc-check.css" />
+    <link rel="stylesheet" href="css/site.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -64,7 +64,7 @@
           <span class="dot"></span>
           <span class="path">~ / wall-of-shame / <b>dmarc_check.sh</b></span>
         </div>
-        <div style="display: flex; gap: 10px; align-items: center">
+        <div class="top-actions">
           <a class="back-btn" href="index.html">◀ back to wall</a>
           <button class="iconbtn" id="themeBtn" type="button" title="Toggle theme">◐</button>
         </div>
@@ -76,7 +76,24 @@
           <span class="title">dmarc_check — bash — 1080×600</span>
         </div>
         <div class="term-body" id="termBody">
-          <span class="session-line" id="bootLine"></span>
+          <span class="session-line"><span class="pmt">$</span> ./dmarc_check.sh</span>
+          <span class="session-line"><span class="ok">[ok]</span> resolver: 1.1.1.1 (DoH)</span>
+
+          <form id="checkForm" class="check-form">
+            <span class="dollar">$</span>
+            <input id="domainInput" type="text" placeholder="example.com" autocomplete="off" spellcheck="false" />
+            <button type="submit" id="runBtn">run check</button>
+          </form>
+
+          <div class="quick" id="quickPicks">
+            <span class="mute">try:</span>
+            <button type="button" class="chip" data-d="google.com">google.com</button>
+            <button type="button" class="chip" data-d="github.com">github.com</button>
+            <button type="button" class="chip" data-d="bbc.co.uk">bbc.co.uk</button>
+            <button type="button" class="chip" data-d="apache.org">apache.org</button>
+          </div>
+
+          <div class="result-area" id="resultArea"></div>
         </div>
       </section>
 
@@ -93,6 +110,7 @@
         </p>
       </div>
     </main>
+    <script src="js/shared.js"></script>
     <script src="js/dmarc-check.js"></script>
   </body>
 </html>

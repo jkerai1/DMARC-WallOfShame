@@ -16,19 +16,7 @@
   /** UI state: search text, filters, sort key, current page. */
   const state = { q: "", status: "all", tld: "", industry: "", sort: "az", page: 1 };
 
-  /* ---------- Dark / light theme (persisted) ---------- */
-  const themeBtn = $("themeBtn");
-  const setTheme = (t) => {
-    document.body.dataset.theme = t;
-    themeBtn.textContent = t === "dark" ? "☀" : "◐";
-    try {
-      localStorage.setItem("cn_theme", t);
-    } catch (e) {
-      /* storage unavailable */
-    }
-  };
-  setTheme(localStorage.getItem("cn_theme") || "dark");
-  themeBtn.onclick = () => setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+  window.setupTheme("themeBtn");
 
   /* ---------- Fake CLI session: timed lines for atmosphere ---------- */
   const sessionEl = $("session");
@@ -141,13 +129,6 @@
       });
     }
 
-    /** Escapes text before inserting into HTML template literals. */
-    function escapeHtml(s) {
-      return String(s).replace(/[&<>\"']/g, (c) =>
-        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
-      );
-    }
-
     /**
      * Runs compute(), updates pager UI, renders current page of rows into `#list`.
      */
@@ -169,11 +150,11 @@
           const cls = d.status === "no_dmarc" ? "no" : "pn";
           const indCls = d.industry ? "" : "empty";
           return `<tr class="row">
-        <td class="nm">${escapeHtml(d.name || "")}</td>
-        <td class="dm">${escapeHtml(d.domain || "")}</td>
-        <td class="tld">${window.tldOf(d.domain)}</td>
-        <td class="ind ${indCls}">${escapeHtml(d.industry || "")}</td>
-        <td><span class="st ${cls}">${cls === "no" ? "NO RECORD" : "p=none"}</span></td>
+        <td class="nm">${window.escapeHtml(d.name || "")}</td>
+        <td class="dm">${window.escapeHtml(d.domain || "")}</td>
+        <td class="tld">${window.escapeHtml(window.tldOf(d.domain))}</td>
+        <td class="ind ${indCls}">${window.escapeHtml(d.industry || "")}</td>
+        <td><span class="st ${cls}">${window.escapeHtml(window.statusShort(d.status))}</span></td>
         <td class="ts">${window.formatDate(d.last_checked)}</td>
       </tr>`;
         })
@@ -190,6 +171,9 @@
     function updateFilterBadge() {
       const active = state.status !== "all" || state.tld || state.industry || state.sort !== "az";
       ftog.classList.toggle("active", !!active);
+    }
+    function scrollToResultsTable() {
+      document.querySelector(".results-table").scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
     $("q").addEventListener("input", (e) => {
@@ -227,12 +211,12 @@
     $("prev").onclick = () => {
       state.page = Math.max(1, state.page - 1);
       render();
-      window.scrollTo({ top: 0 });
+      scrollToResultsTable();
     };
     $("next").onclick = () => {
       state.page = state.page + 1;
       render();
-      window.scrollTo({ top: 0 });
+      scrollToResultsTable();
     };
 
     /** Export all rows matching current filters as RFC-style CSV download. */
