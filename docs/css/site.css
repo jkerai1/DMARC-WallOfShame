@@ -461,6 +461,13 @@ summary:focus-visible,
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.row .dm a {
+  color: inherit;
+  text-decoration: none;
+}
+.row .dm a:hover {
+  text-decoration: underline;
+}
 .row .tld {
   color: var(--ink-mute);
 }

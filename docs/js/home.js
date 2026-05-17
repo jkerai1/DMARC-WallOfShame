@@ -165,9 +165,11 @@
           const indCls = d.industry ? "" : "empty";
           const statusLabel = window.statusLabel(d.status);
           const statusShort = window.statusShort(d.status);
+          const domain = d.domain || "";
+          const checkerUrl = `dmarc-check.html?domain=${encodeURIComponent(domain)}`;
           return `<tr class="row">
         <th class="nm" scope="row">${window.escapeHtml(d.name || "")}</th>
-        <td class="dm">${window.escapeHtml(d.domain || "")}</td>
+        <td class="dm"><a href="${checkerUrl}" aria-label="Check DMARC for ${window.escapeHtml(domain)}">${window.escapeHtml(domain)}</a></td>
         <td class="tld">${window.escapeHtml(window.tldOf(d.domain))}</td>
         <td class="ind ${indCls}">${window.escapeHtml(d.industry || "")}</td>
         <td><span class="st ${cls}"><span aria-hidden="true">${window.escapeHtml(statusShort)}</span><span class="sr-only">${window.escapeHtml(statusLabel)}</span></span></td>

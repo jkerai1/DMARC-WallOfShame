@@ -15,8 +15,6 @@
   const resultArea = $("resultArea");
   const domainError = $("domainError");
 
-  setTimeout(() => input.focus(), 80);
-
   quickPicks.onclick = (e) => {
     const chip = e.target.closest("button[data-d]");
     if (!chip) return;
@@ -31,8 +29,17 @@
       showError("please enter a valid domain (eg. example.com)");
       return;
     }
+    updateDomainParam(domain);
     runCheck(domain);
   };
+
+  const initialDomain = normalizeDomain(new URLSearchParams(window.location.search).get("domain"));
+  if (initialDomain) {
+    input.value = initialDomain;
+    setTimeout(() => runCheck(initialDomain), 80);
+  } else {
+    setTimeout(() => input.focus(), 80);
+  }
 
   function normalizeDomain(value) {
     const domain = String(value || "")
@@ -43,6 +50,12 @@
       .replace(/:\d+$/, "");
     if (!domain || !domain.includes(".") || domain.includes(" ")) return "";
     return domain;
+  }
+
+  function updateDomainParam(domain) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("domain", domain);
+    window.history.replaceState(null, "", url);
   }
 
   function disableForm(disabled) {
@@ -252,6 +265,7 @@
       input.value = "";
       input.setAttribute("aria-invalid", "false");
       domainError.textContent = "";
+      window.history.replaceState(null, "", window.location.pathname);
       input.focus();
     };
     resultArea.setAttribute("aria-busy", "false");
