@@ -369,6 +369,7 @@ body {
   table-layout: fixed;
   font-size: 12px;
   line-height: 1.2;
+  scroll-margin-top: 8px;
 }
 .results-table th {
   color: var(--ink-mute);
@@ -379,6 +380,9 @@ body {
   background: var(--bg);
   font-weight: 400;
   text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 .results-table th,
 .results-table td {
@@ -473,6 +477,12 @@ body {
 .toolbtn:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+.toolbtn:disabled {
+  color: var(--ink-mute);
+  border-color: var(--line);
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .footrow {
@@ -900,6 +910,16 @@ body {
   }
   .check-form .dollar {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 

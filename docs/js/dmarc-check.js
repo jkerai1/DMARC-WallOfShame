@@ -76,7 +76,7 @@
     let record = null;
     try {
       const lookup = fetchDmarcRecord(domain);
-      await wait(500);
+      if (!window.prefersReducedMotion()) await wait(500);
       record = await lookup;
     } catch (e) {
       appendLine(`<span class="hl">[err]</span> resolver error: ${escapeHtml(e.message)}`);

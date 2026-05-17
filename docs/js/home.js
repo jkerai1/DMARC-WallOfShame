@@ -57,7 +57,12 @@
     $("stTotal").textContent = data.length.toLocaleString();
     $("stNo").textContent = data.filter((d) => d.status === "no_dmarc").length.toLocaleString();
     $("stP").textContent = data.filter((d) => d.status === "p_none").length.toLocaleString();
-    $("lastChecked").textContent = data[0] ? window.formatDate(data[0].last_checked) : "—";
+    const newestCheck = data.reduce((latest, d) => {
+      const checked = Date.parse(d.last_checked);
+      if (Number.isNaN(checked)) return latest;
+      return Math.max(latest, checked);
+    }, 0);
+    $("lastChecked").textContent = newestCheck ? window.formatDate(newestCheck) : "—";
 
     /* TLD dropdown: top 30 suffixes by count */
     const tldCounts = {};
@@ -141,6 +146,9 @@
       const slice = filtered.slice(start, start + PAGE);
       $("resultCount").textContent = total.toLocaleString() + " match" + (total === 1 ? "" : "es");
       $("pageLabel").textContent = `page ${state.page} / ${pages}`;
+      $("prev").disabled = state.page <= 1;
+      $("next").disabled = state.page >= pages;
+      $("exportBtn").disabled = total === 0;
       if (!slice.length) {
         $("list").innerHTML = '<tr><td class="empty" colspan="6">// no matches</td></tr>';
         return;
@@ -173,7 +181,8 @@
       ftog.classList.toggle("active", !!active);
     }
     function scrollToResultsTable() {
-      document.querySelector(".results-table").scrollIntoView({ behavior: "smooth", block: "start" });
+      const behavior = window.prefersReducedMotion() ? "auto" : "smooth";
+      document.querySelector(".results-table").scrollIntoView({ behavior, block: "start" });
     }
 
     $("q").addEventListener("input", (e) => {
@@ -209,11 +218,13 @@
       updateFilterBadge();
     };
     $("prev").onclick = () => {
+      if (state.page <= 1) return;
       state.page = Math.max(1, state.page - 1);
       render();
       scrollToResultsTable();
     };
     $("next").onclick = () => {
+      if ($("next").disabled) return;
       state.page = state.page + 1;
       render();
       scrollToResultsTable();

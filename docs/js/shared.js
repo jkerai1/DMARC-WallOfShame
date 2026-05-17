@@ -41,6 +41,10 @@ window.setupTheme = function (buttonId) {
   }
 };
 
+window.prefersReducedMotion = function () {
+  return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+};
+
 /**
  * Fetches the domain list and deduplicates by domain (case-insensitive).
  *
