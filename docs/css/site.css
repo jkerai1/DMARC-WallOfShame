@@ -391,6 +391,9 @@ summary:focus-visible,
   padding: 6px 10px;
   cursor: pointer;
 }
+.clear-filters {
+  padding-inline: 10px;
+}
 
 .results-table {
   width: 100%;

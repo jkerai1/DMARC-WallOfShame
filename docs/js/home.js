@@ -15,6 +15,7 @@
 
   /** UI state: search text, filters, sort key, current page. */
   const state = { q: "", status: "all", tld: "", industry: "", sort: "az", page: 1 };
+  let searchTimer = 0;
 
   window.setupTheme("themeBtn");
   const listEl = $("list");
@@ -146,7 +147,11 @@
       if (state.page > pages) state.page = pages;
       const start = (state.page - 1) * PAGE;
       const slice = filtered.slice(start, start + PAGE);
-      $("resultCount").textContent = total.toLocaleString() + " match" + (total === 1 ? "" : "es");
+      const end = Math.min(start + slice.length, total);
+      const matchLabel = total === 1 ? "match" : "matches";
+      $("resultCount").textContent = total
+        ? `${(start + 1).toLocaleString()}-${end.toLocaleString()} of ${total.toLocaleString()} ${matchLabel}`
+        : "0 matches";
       $("pageLabel").textContent = `page ${state.page} / ${pages}`;
       $("prev").disabled = state.page <= 1;
       $("next").disabled = state.page >= pages;
@@ -188,18 +193,76 @@
       ftog.setAttribute("aria-expanded", open ? "true" : "false");
     };
     function updateFilterBadge() {
-      const active = state.status !== "all" || state.tld || state.industry || state.sort !== "az";
+      const active = state.q.trim() || state.status !== "all" || state.tld || state.industry || state.sort !== "az";
       ftog.classList.toggle("active", !!active);
+      $("clearFilters").disabled = !active;
     }
     function scrollToResultsTable() {
       const behavior = window.prefersReducedMotion() ? "auto" : "smooth";
       document.querySelector(".results-table").scrollIntoView({ behavior, block: "start" });
     }
+    function updateUrlFromState() {
+      const params = new URLSearchParams();
+      if (state.q.trim()) params.set("q", state.q.trim());
+      if (state.status !== "all") params.set("status", state.status);
+      if (state.tld) params.set("tld", state.tld);
+      if (state.industry) params.set("industry", state.industry);
+      if (state.sort !== "az") params.set("sort", state.sort);
+      if (state.page > 1) params.set("page", String(state.page));
+      const query = params.toString();
+      const nextUrl = window.location.pathname + (query ? `?${query}` : "");
+      window.history.replaceState(null, "", nextUrl);
+    }
+    function renderNow() {
+      render();
+      updateFilterBadge();
+      updateUrlFromState();
+    }
+    function queueRender() {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(renderNow, 120);
+    }
+    function ensureSelectValue(select, value, label) {
+      if (!value) return;
+      const hasValue = Array.from(select.options).some((option) => option.value === value);
+      if (hasValue) return;
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      select.appendChild(option);
+    }
+    function readStateFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get("status") || "all";
+      const sort = params.get("sort") || "az";
+      const page = Number.parseInt(params.get("page") || "1", 10);
+
+      state.q = params.get("q") || "";
+      if (["all", "no_dmarc", "p_none"].includes(status)) state.status = status;
+      state.tld = params.get("tld") || "";
+      state.industry = params.get("industry") || "";
+      if (["az", "za", "tld", "industry", "status"].includes(sort)) state.sort = sort;
+      state.page = Number.isInteger(page) && page > 0 ? page : 1;
+
+      ensureSelectValue($("tldSel"), state.tld, `tld: ${state.tld}`);
+      ensureSelectValue($("indSel"), state.industry, `industry: ${state.industry}`);
+    }
+    function syncControlsFromState() {
+      $("q").value = state.q;
+      document.querySelectorAll("#statusSeg button").forEach((button) => {
+        const active = button.dataset.v === state.status;
+        button.classList.toggle("on", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      $("tldSel").value = state.tld;
+      $("indSel").value = state.industry;
+      $("sortSel").value = state.sort;
+    }
 
     $("q").addEventListener("input", (e) => {
       state.q = e.target.value;
       state.page = 1;
-      render();
+      queueRender();
     });
     document.querySelectorAll("#statusSeg button").forEach((b) => {
       b.onclick = () => {
@@ -211,37 +274,45 @@
         b.setAttribute("aria-pressed", "true");
         state.status = b.dataset.v;
         state.page = 1;
-        render();
-        updateFilterBadge();
+        renderNow();
       };
     });
     $("tldSel").onchange = (e) => {
       state.tld = e.target.value;
       state.page = 1;
-      render();
-      updateFilterBadge();
+      renderNow();
     };
     $("indSel").onchange = (e) => {
       state.industry = e.target.value;
       state.page = 1;
-      render();
-      updateFilterBadge();
+      renderNow();
     };
     $("sortSel").onchange = (e) => {
       state.sort = e.target.value;
-      render();
-      updateFilterBadge();
+      state.page = 1;
+      renderNow();
+    };
+    $("clearFilters").onclick = () => {
+      clearTimeout(searchTimer);
+      state.q = "";
+      state.status = "all";
+      state.tld = "";
+      state.industry = "";
+      state.sort = "az";
+      state.page = 1;
+      syncControlsFromState();
+      renderNow();
     };
     $("prev").onclick = () => {
       if (state.page <= 1) return;
       state.page = Math.max(1, state.page - 1);
-      render();
+      renderNow();
       scrollToResultsTable();
     };
     $("next").onclick = () => {
       if ($("next").disabled) return;
       state.page = state.page + 1;
-      render();
+      renderNow();
       scrollToResultsTable();
     };
 
@@ -271,6 +342,8 @@
       URL.revokeObjectURL(url);
     };
 
-    render();
+    readStateFromUrl();
+    syncControlsFromState();
+    renderNow();
   })();
 })();
