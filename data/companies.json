@@ -1351,7 +1351,6 @@
   { "name": "Heroku", "domain": "herokuapp.com", "industry": "Technology & Software" },
   { "name": "Unit IT", "domain": "unit-it.dk", "industry": "Technology & Software" },
   { "name": "Sonata Software", "domain": "sonata-software.com", "industry": "Technology & Software" },
-  { "name": "KSEC (Only Security)", "domain": "onlysecurity.com", "industry": "Technology & Software" },
   { "name": "Canadianappliance", "domain": "canadianappliance.ca", "industry": "Other" },
   { "name": "Flowrite", "domain": "flowrite.com", "industry": "Other" },
   { "name": "Oteacher", "domain": "oteacher.org", "industry": "Other" },
@@ -1827,6 +1826,6 @@
   { "name": "Tv100", "domain": "tv100.com", "industry": "Other" },
   { "name": "Crackyourinterview", "domain": "crackyourinterview.com", "industry": "Other" },
   { "name": "Hamdanelectronics", "domain": "hamdanelectronics.com", "industry": "Other" },
-  { "name": "Modernmediaglobal", "domain": "modernmediaglobal.com", "industry": "Other" }
+  { "name": "Modernmediaglobal", "domain": "modernmediaglobal.com", "industry": "Other" },
   { "name": "KSEC (Only Security)", "domain": "onlysecurity.com", "industry": "Technology & Software" }
 ]
