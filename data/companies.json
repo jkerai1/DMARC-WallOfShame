@@ -1827,5 +1827,7 @@
   { "name": "Crackyourinterview", "domain": "crackyourinterview.com", "industry": "Other" },
   { "name": "Hamdanelectronics", "domain": "hamdanelectronics.com", "industry": "Other" },
   { "name": "Modernmediaglobal", "domain": "modernmediaglobal.com", "industry": "Other" },
-  { "name": "KSEC (Only Security)", "domain": "onlysecurity.com", "industry": "Technology & Software" }
+  { "name": "KSEC (Only Security)", "domain": "onlysecurity.com", "industry": "Technology & Software" },
+  { "name": "Collinson Group", "domain": "collinsongroup.com", "industry": "Other" },
+  { "name": "Lounge Key", "domain": "loungekey.com", "industry": "Other" }
 ]
