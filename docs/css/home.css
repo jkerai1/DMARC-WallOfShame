@@ -217,6 +217,30 @@ body {
   color: var(--bg);
 }
 
+.ascii-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.fix-cta {
+  margin-left: auto;
+  background: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.fix-cta:hover {
+  filter: brightness(1.1);
+}
+
 .ascii {
   color: var(--accent);
   white-space: pre;
@@ -255,6 +279,9 @@ body {
     align-items: center;
     gap: 14px;
     overflow: visible;
+  }
+  .fix-cta {
+    margin-left: 0;
   }
   .blood-text {
     font-size: 34px;
