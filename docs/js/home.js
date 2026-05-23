@@ -200,7 +200,7 @@
       state.status = cell.dataset.v;
       state.page = 1;
       syncCellStatus();
-      render({ scroll: true });
+      render();
       updateFilterBadge();
     });
     document.querySelector(".grid").addEventListener("keydown", (e) => {
