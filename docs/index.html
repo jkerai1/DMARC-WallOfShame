@@ -102,18 +102,19 @@
    [public audit log]
         </pre>
         <span class="blood-text">wall of shame</span>
+        <a class="fix-cta" href="learn.html">How to fix ▶</a>
       </div>
 
       <section class="grid">
-        <div class="cell">
+        <div class="cell on" data-v="all" role="button" tabindex="0" aria-pressed="true">
           <div class="k">total_records</div>
           <div class="v" id="stTotal">—</div>
         </div>
-        <div class="cell s">
+        <div class="cell s" data-v="no_dmarc" role="button" tabindex="0" aria-pressed="false">
           <div class="k">no_dmarc</div>
           <div class="v" id="stNo">—</div>
         </div>
-        <div class="cell w">
+        <div class="cell w" data-v="p_none" role="button" tabindex="0" aria-pressed="false">
           <div class="k">policy=none</div>
           <div class="v" id="stP">—</div>
         </div>
@@ -121,17 +122,12 @@
 
       <section class="controls" id="controls">
         <label class="input">
-          <input id="q" placeholder="grep -i 'name|domain|.tld|industry' …" autocomplete="off" />
+          <input id="q" placeholder="Search a domain..." autocomplete="off" />
         </label>
         <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false">
           <span class="dotbadge"></span> filters ▾
         </button>
         <div class="filters">
-          <div class="seg" id="statusSeg">
-            <button type="button" data-v="all" class="on">all</button>
-            <button type="button" data-v="no_dmarc">no_dmarc</button>
-            <button type="button" data-v="p_none">p=none</button>
-          </div>
           <select class="select" id="tldSel" aria-label="Filter by TLD">
             <option value="">tld: any</option>
           </select>
@@ -171,11 +167,6 @@
       </section>
 
       <div class="footrow">
-        <span
-          ><span class="pmt" style="color: var(--accent)">$</span> tail -f /var/log/dmarc-shame.log<span
-            class="cursor"
-          ></span
-        ></span>
         <button class="toolbtn" id="exportBtn" type="button">⇣ export csv</button>
       </div>
 

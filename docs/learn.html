@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What is DMARC? SPF, DKIM and email authentication explained — DMARC Wall of Shame</title>
+    <meta
+      name="description"
+      content="Plain-language guide to SPF, DKIM, and DMARC. Learn what each protocol does, how to set up a DMARC record, and how to move from monitoring to full enforcement."
+    />
+    <link rel="canonical" href="https://dmarcwallofshame.org/learn.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DMARC Wall of Shame" />
+    <meta property="og:title" content="What is DMARC? SPF and DKIM explained" />
+    <meta
+      property="og:description"
+      content="Plain-language guide to SPF, DKIM, and DMARC — what each protocol does and how to set up enforcement for your domain."
+    />
+    <meta property="og:url" content="https://dmarcwallofshame.org/learn.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="What is DMARC? SPF and DKIM explained" />
+    <meta
+      name="twitter:description"
+      content="Plain-language guide to SPF, DKIM, and DMARC — what each protocol does and how to set up enforcement."
+    />
+    <meta name="theme-color" content="#0c0d0a" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Geist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/learn.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "name": "What is DMARC? SPF, DKIM and email authentication explained",
+        "url": "https://dmarcwallofshame.org/learn.html",
+        "description": "Plain-language guide to SPF, DKIM, and DMARC for domain owners.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "DMARC Wall of Shame",
+          "url": "https://dmarcwallofshame.org/"
+        }
+      }
+    </script>
+  </head>
+  <body data-theme="dark">
+    <div class="scan"></div>
+    <main class="wrap">
+      <h1 class="sr-only">Email authentication guide: SPF, DKIM, and DMARC</h1>
+
+      <div class="topbar">
+        <div class="left">
+          <span class="dot"></span>
+          <span class="path">~ / wall-of-shame / <b>learn_dmarc.sh</b></span>
+        </div>
+        <div class="right">
+          <a class="nav-btn" href="index.html">◀ back to wall</a>
+          <a class="nav-btn" href="dmarc-check.html">▶ check_my_domain.sh</a>
+          <button class="iconbtn" id="themeBtn" type="button" title="Toggle theme">◐</button>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <p class="subtitle">// email_authentication_guide.md — SPF, DKIM, and DMARC for domain owners</p>
+      </div>
+
+      <!-- SPF -->
+      <section class="section" aria-labelledby="spf-heading">
+        <h2 class="sec-title" id="spf-heading">// what_is_spf</h2>
+        <p class="sec-body">
+          <strong>SPF (Sender Policy Framework)</strong> is a DNS TXT record that lists the servers and services
+          authorised to send email on behalf of your domain. When a message arrives, the receiving server checks
+          whether the sending server's IP address appears in your SPF record. If it does not, the SPF check fails.
+        </p>
+        <p class="sec-body">
+          The record is published at your root domain. A typical SPF record for a Microsoft 365 tenant looks like this:
+        </p>
+        <pre class="code-block"><span class="label">DNS TXT record — example.com</span>v=spf1 include:spf.protection.outlook.com -all</pre>
+        <table class="tag-table" aria-label="SPF tag reference">
+          <tr>
+            <td>v=spf1</td>
+            <td>Required. Identifies this as an SPF record.</td>
+          </tr>
+          <tr>
+            <td>include:</td>
+            <td>Authorises another domain's SPF record. Each sending service (Exchange Online, Google Workspace, Mailchimp, etc.) provides its own value.</td>
+          </tr>
+          <tr>
+            <td>-all</td>
+            <td><b>Hard fail.</b> Reject any sender not listed. Use <code>~all</code> (soft fail) during initial setup, then move to <code>-all</code>.</td>
+          </tr>
+        </table>
+        <div class="tip">
+          <b>One record per domain.</b> SPF only allows a single TXT record. If you have multiple sending services, combine them into one record using multiple <code>include:</code> mechanisms rather than publishing separate records.
+        </div>
+      </section>
+
+      <!-- DKIM -->
+      <section class="section" aria-labelledby="dkim-heading">
+        <h2 class="sec-title" id="dkim-heading">// what_is_dkim</h2>
+        <p class="sec-body">
+          <strong>DKIM (DomainKeys Identified Mail)</strong> adds a cryptographic signature to the headers of outgoing
+          messages. The receiving server retrieves your public key from DNS and uses it to verify that the message has
+          not been modified in transit.
+        </p>
+        <p class="sec-body">
+          DKIM must be configured on <strong>every service that sends mail from your domain.</strong> Exchange Online,
+          Mailchimp, HubSpot, and similar platforms each generate their own key pair. You publish the public key as a
+          DNS TXT record at a selector-specific subdomain, and the platform signs outgoing mail with the corresponding
+          private key.
+        </p>
+        <pre class="code-block"><span class="label">DNS TXT record — selector._domainkey.example.com</span>v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ...</pre>
+        <p class="sec-body">
+          Each sending service provides its own selector name and public key value. Follow the DKIM setup guide for
+          each platform you use. If a service sends mail but has no DKIM signature configured, those messages will
+          fail DKIM checks regardless of your DMARC policy.
+        </p>
+      </section>
+
+      <!-- DMARC -->
+      <section class="section" aria-labelledby="dmarc-heading">
+        <h2 class="sec-title" id="dmarc-heading">// what_is_dmarc</h2>
+        <p class="sec-body">
+          <strong>DMARC (Domain-based Message Authentication, Reporting and Conformance)</strong> ties SPF and DKIM
+          together with a published policy. It tells receiving servers what to do when one or both of those checks fail,
+          and adds an alignment requirement: the authenticated domain must match the <code>From:</code> address the
+          recipient sees.
+        </p>
+        <p class="sec-body">
+          The record is published as a DNS TXT record at <code>_dmarc.yourdomain.com</code>. For a message to pass
+          DMARC, at least one of SPF or DKIM must pass <strong>and</strong> align with the <code>From:</code> domain.
+        </p>
+        <pre class="code-block"><span class="label">DNS TXT record — _dmarc.example.com</span>v=DMARC1; p=reject; sp=reject; rua=mailto:dmarc-reports@example.com</pre>
+        <p class="sec-body">
+          Without a DMARC record at enforcement level, anyone can send email that appears to come from your domain.
+          This technique is the foundation of phishing campaigns, business email compromise, and brand spoofing attacks.
+        </p>
+      </section>
+
+      <!-- Three policies -->
+      <section class="section" aria-labelledby="policies-heading">
+        <h2 class="sec-title" id="policies-heading">// the_three_policies</h2>
+        <p class="sec-body">
+          The <code>p=</code> tag sets your policy. The <code>sp=</code> tag sets the policy for subdomains separately.
+          If <code>sp=</code> is omitted, subdomains inherit <code>p=</code>.
+        </p>
+        <div class="policy-grid">
+          <div class="policy-card none">
+            <span class="p-tag">p=none</span>
+            <span class="p-name">Monitor</span>
+            <span class="p-desc">No action taken on failing messages. Reports are sent if <code style="font:inherit;font-size:11px">rua=</code> is configured. A starting point, not a permanent posture.</span>
+          </div>
+          <div class="policy-card quarantine">
+            <span class="p-tag">p=quarantine</span>
+            <span class="p-name">Quarantine</span>
+            <span class="p-desc">Failing messages are delivered to the recipient's junk or spam folder. Partial protection while you work toward full enforcement.</span>
+          </div>
+          <div class="policy-card reject">
+            <span class="p-tag">p=reject</span>
+            <span class="p-name">Enforce</span>
+            <span class="p-desc">Failing messages are rejected outright and never delivered. The strongest available protection against spoofing.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Setup -->
+      <section class="section" aria-labelledby="setup-heading">
+        <h2 class="sec-title" id="setup-heading">// how_to_set_it_up</h2>
+        <p class="sec-body">
+          A DMARC record is a single DNS TXT record. Here are two common configurations:
+        </p>
+        <pre class="code-block"><span class="label">Minimum viable record (monitoring only)</span>v=DMARC1; p=none; rua=mailto:dmarc-reports@example.com</pre>
+        <pre class="code-block"><span class="label">Fully hardened record</span>v=DMARC1; p=reject; sp=reject; rua=mailto:dmarc-reports@example.com; adkim=s; aspf=s</pre>
+        <table class="tag-table" aria-label="DMARC tag reference">
+          <tr>
+            <td>v=DMARC1</td>
+            <td>Required. Identifies the record as DMARC.</td>
+          </tr>
+          <tr>
+            <td>p=</td>
+            <td>Policy for the domain. <b>none</b>, <b>quarantine</b>, or <b>reject</b>.</td>
+          </tr>
+          <tr>
+            <td>sp=</td>
+            <td>Policy for subdomains. Defaults to <code>p=</code> if omitted. Set explicitly to avoid ambiguity.</td>
+          </tr>
+          <tr>
+            <td>pct=</td>
+            <td>Percentage of failing messages the policy applies to. Default is <b>100</b>. Lower values are useful during a staged rollout to quarantine or reject.</td>
+          </tr>
+          <tr>
+            <td>rua=</td>
+            <td>Aggregate report destination. Receiving servers send daily XML summaries of pass/fail counts to this address. Essential for visibility.</td>
+          </tr>
+          <tr>
+            <td>ruf=</td>
+            <td>Forensic report destination. Individual message-level failure reports. Not widely supported and often disabled by major providers.</td>
+          </tr>
+          <tr>
+            <td>adkim=</td>
+            <td>DKIM alignment mode. <b>r</b> (relaxed, default) allows subdomain matches. <b>s</b> (strict) requires an exact domain match.</td>
+          </tr>
+          <tr>
+            <td>aspf=</td>
+            <td>SPF alignment mode. Same relaxed/strict options as <code>adkim=</code>.</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Rollout -->
+      <section class="section" aria-labelledby="rollout-heading">
+        <h2 class="sec-title" id="rollout-heading">// recommended_rollout</h2>
+        <p class="sec-body">
+          Moving straight to <code>p=reject</code> without preparation risks blocking legitimate mail. A staged approach
+          gives you visibility before applying enforcement.
+        </p>
+        <ol class="steps">
+          <li>
+            <div>
+              <b>Publish SPF and configure DKIM on all sending services.</b> Inventory every service that sends mail from your domain: your mail server, CRM, marketing platform, ticketing system, and so on. Each one needs to be covered by SPF and have DKIM configured before you move beyond <code>p=none</code>.
+            </div>
+          </li>
+          <li>
+            <div>
+              <b>Start at <code>p=none</code> with a reporting address.</b> Set <code>rua=</code> to an address you monitor. Aggregate reports will show which services are passing and which are failing, without affecting mail delivery.
+            </div>
+          </li>
+          <li>
+            <div>
+              <b>Review aggregate reports for two to four weeks.</b> Look for legitimate senders that are failing SPF or DKIM. For each one, add the appropriate SPF <code>include:</code> and configure DKIM on that platform. Repeat until reports show only unauthenticated sources failing.
+            </div>
+          </li>
+          <li>
+            <div>
+              <b>Move to <code>p=reject</code>.</b> Once every legitimate sending service is covered, update your DMARC record to <code>p=reject; sp=reject</code>. Spoofed messages are now blocked outright.
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Common mistakes -->
+      <section class="section" aria-labelledby="mistakes-heading">
+        <h2 class="sec-title" id="mistakes-heading">// common_mistakes</h2>
+        <table class="tag-table" aria-label="Common DMARC mistakes">
+          <tr>
+            <td>No <code>sp=</code></td>
+            <td>Subdomains inherit <code>p=</code> but the behaviour is implicit. Setting <code>sp=reject</code> explicitly makes your intent clear and protects subdomains even if the inheritance rules change.</td>
+          </tr>
+          <tr>
+            <td>No <code>rua=</code></td>
+            <td>Without an aggregate reporting address you have no visibility into what is failing. You are flying blind.</td>
+          </tr>
+          <tr>
+            <td>Stopping at <code>p=none</code></td>
+            <td><code>p=none</code> provides zero protection. It is a monitoring phase. Domains that stay here indefinitely appear on the <a href="index.html">Wall of Shame</a>.</td>
+          </tr>
+          <tr>
+            <td>Missing DKIM on a sender</td>
+            <td>If a sending service is not configured for DKIM it will fail DKIM checks on every message. Identify all senders before moving to enforcement.</td>
+          </tr>
+          <tr>
+            <td>Jumping straight to <code>p=reject</code></td>
+            <td>Without reviewing reports first you risk rejecting legitimate mail from services you forgot to configure. Follow the staged rollout above.</td>
+          </tr>
+          <tr>
+            <td>Forgetting parked domains</td>
+            <td>Domains that send no mail are common spoofing targets precisely because they have no DMARC record. Publish <code>v=DMARC1; p=reject; sp=reject</code> plus <code>v=spf1 -all</code> on parked domains.</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- CTA -->
+      <div class="cta-block">
+        <p>Ready to check your domain?</p>
+        <a class="cta-link" href="dmarc-check.html">▶ run check_my_domain.sh</a>
+      </div>
+    </main>
+
+    <script>
+      (() => {
+        const btn = document.getElementById("themeBtn");
+        const setTheme = (t) => {
+          document.body.dataset.theme = t;
+          btn.textContent = t === "dark" ? "☀" : "◐";
+          try { localStorage.setItem("cn_theme", t); } catch (e) {}
+        };
+        setTheme(localStorage.getItem("cn_theme") || "dark");
+        btn.onclick = () => setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+      })();
+    </script>
+  </body>
+</html>

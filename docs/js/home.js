@@ -187,15 +187,28 @@
       state.page = 1;
       render({ scroll: true });
     });
-    document.querySelectorAll("#statusSeg button").forEach((b) => {
-      b.onclick = () => {
-        document.querySelectorAll("#statusSeg button").forEach((x) => x.classList.remove("on"));
-        b.classList.add("on");
-        state.status = b.dataset.v;
-        state.page = 1;
-        render({ scroll: true });
-        updateFilterBadge();
-      };
+    function syncCellStatus() {
+      document.querySelectorAll(".grid .cell[data-v]").forEach((c) => {
+        const active = c.dataset.v === state.status;
+        c.classList.toggle("on", active);
+        c.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+    }
+    document.querySelector(".grid").addEventListener("click", (e) => {
+      const cell = e.target.closest(".cell[data-v]");
+      if (!cell) return;
+      state.status = cell.dataset.v;
+      state.page = 1;
+      syncCellStatus();
+      render();
+      updateFilterBadge();
+    });
+    document.querySelector(".grid").addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const cell = e.target.closest(".cell[data-v]");
+      if (!cell) return;
+      e.preventDefault();
+      cell.click();
     });
     $("tldSel").onchange = (e) => {
       state.tld = e.target.value;
