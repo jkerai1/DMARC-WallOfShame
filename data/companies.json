@@ -13,12 +13,12 @@
   { "name": "Github", "domain": "github.blog", "industry": "Technology & Software" },
   { "name": "Github (Atom)", "domain": "atom.io", "industry": "Technology & Software" },
   { "name": "Active Quote", "domain": "activequote.com", "industry": "Finance & Insurance" },
-  { "name": "Iberia Airlines", "domain": "iberiaexpress.com", "industry": "Technology & Software" },
+  { "name": "Iberia Airlines", "domain": "iberiaexpress.com", "industry": "Aviation & Travel" },
   { "name": "Travel Lodge", "domain": "travelodge.co.uk", "industry": "Aviation & Travel" },
   { "name": "Holiday Inn", "domain": "ihg.com", "industry": "Aviation & Travel" },
   { "name": "Premier Inn", "domain": "premierinn.com", "industry": "Aviation & Travel" },
-  { "name": "Iceland Air", "domain": "icelandair.com", "industry": "Technology & Software" },
-  { "name": "Norweigan Air", "domain": "norwegian.com", "industry": "Technology & Software" },
+  { "name": "Iceland Air", "domain": "icelandair.com", "industry": "Aviation & Travel" },
+  { "name": "Norweigan Air", "domain": "norwegian.com", "industry": "Aviation & Travel" },
   { "name": "United Nations Office For Disarmament Affairs", "domain": "unoda.org", "industry": "Technology & Software" },
   { "name": "United Nations Human Rights", "domain": "ohchr.org", "industry": "Government & Public Sector" },
   { "name": "United Nations Refugee Academy", "domain": "unhcr.org", "industry": "Government & Public Sector" },
@@ -1833,5 +1833,9 @@
   { "name": "LTTStore", "domain": "lttstore.com", "industry": "Media & Entertainment" },
   {"name": "Luton Dart", "domain": "lutondart.com", "industry": "Aviation & Travel"},
   {"name": "Tallinn Transport Info", "domain": "teely.ee", "industry": "Aviation & Travel"},
-  {"name": "PADI", "domain": "padi.com", "industry": "Sport"}
+  {"name": "PADI", "domain": "padi.com", "industry": "Sport"},
+  {"name": "RunZero", "domain": "runzero.com", "industry": "Cybersecurity"},
+  {"name": "Cyber Salus", "domain": "cybersalus.com", "industry": "Cybersecurity"},
+  {"name": "CriminalIP", "domain": "criminalip.io", "industry": "Cybersecurity"},
+  {"name": "Workspace Audit", "domain": "workspaceaudit.com", "industry": "Cybersecurity"}
 ]
