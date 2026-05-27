@@ -1830,5 +1830,8 @@
   { "name": "KSEC (Only Security)", "domain": "onlysecurity.com", "industry": "Technology & Software" },
   { "name": "Collinson Group", "domain": "collinsongroup.com", "industry": "Other" },
   { "name": "Lounge Key", "domain": "loungekey.com", "industry": "Other" },
-  { "name": "LTTStore", "domain": "lttstore.com", "industry": "Media & Entertainment" }
+  { "name": "LTTStore", "domain": "lttstore.com", "industry": "Media & Entertainment" },
+  {"name": "Luton Dart", "domain": "lutondart.com", "industry": "Aviation & Travel"},
+  {"name": "Tallinn Transport Info", "domain": "teely.ee", "industry": "Aviation & Travel"},
+  {"name": "PADI", "domain": "padi.com", "industry": "Sport"}
 ]
