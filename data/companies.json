@@ -1839,5 +1839,6 @@
   {"name": "CriminalIP", "domain": "criminalip.io", "industry": "Cybersecurity"},
   {"name": "Workspace Audit", "domain": "workspaceaudit.com", "industry": "Cybersecurity"},
   {"name": "Threatlocker", "domain": "threatlockerfeatures.com", "industry": "Cybersecurity"},
-  {"name": "MISP Project", "domain": "misp-project.org", "industry": "Cybersecurity"}
+  {"name": "MISP Project", "domain": "misp-project.org", "industry": "Cybersecurity"},
+  {"name": "Gitter", "domain": "gitter.im", "industry": "Other"}
 ]
