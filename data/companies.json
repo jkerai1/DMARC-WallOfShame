@@ -1841,5 +1841,6 @@
   {"name": "Gitter", "domain": "gitter.im", "industry": "Other"},
   {"name": "Microsoft Azure", "domain": "azure.com", "industry": "Technology & Software"},
   {"name": "Simply IT", "domain": "simply-it.co.uk", "industry": "Technology & Software"},
-  {"name": "BeWise", "domain": "bewise.gr", "industry": "Technology & Software"}
+  {"name": "BeWise", "domain": "bewise.gr", "industry": "Technology & Software"},
+  {"name": "dataplanet", "domain": "dataplanet.co.uk", "industry": "Technology & Software"}
 ]
