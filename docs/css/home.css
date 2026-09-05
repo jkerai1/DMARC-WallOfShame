@@ -245,7 +245,13 @@ body {
   user-select: none;
   min-width: 0;
   margin-bottom: 12px;
-  text-shadow: none;
+  text-shadow:
+    2px 3px 0 #5c1f21,
+    3px 5px 0 #3d1820,
+    4px 8px 0 rgba(92, 31, 33, 0.7),
+    -1px 12px 10px rgba(188, 71, 73, 0.3),
+    1px 20px 12px rgba(0, 0, 0, 0.4),
+    2px 30px 16px rgba(0, 0, 0, 0.2);
   flex: 0 0 auto;
 }
 
