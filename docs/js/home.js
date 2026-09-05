@@ -147,7 +147,9 @@
       const start = (state.page - 1) * PAGE;
       const slice = filtered.slice(start, start + PAGE);
       $("resultCount").textContent = total.toLocaleString() + " match" + (total === 1 ? "" : "es");
-      $("pageLabel").textContent = `page ${state.page} / ${pages}`;
+      $("pageLabel").textContent = `Page ${state.page} of ${pages}`;
+      $("prev").disabled = state.page <= 1;
+      $("next").disabled = state.page >= pages;
       if (!slice.length) {
         $("list").innerHTML = '<div class="list-empty">// no matches</div>';
         if (opts && opts.scroll) scrollResultsIntoView();
