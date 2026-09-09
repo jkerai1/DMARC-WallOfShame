@@ -158,11 +158,11 @@
 
         <div class="pager">
           <span id="resultCount">…</span>
-          <div class="nav">
-            <button class="toolbtn" id="prev" type="button">◀ prev</button>
-            <span id="pageLabel">page 1</span>
-            <button class="toolbtn" id="next" type="button">next ▶</button>
-          </div>
+          <nav class="nav" aria-label="Results pages">
+            <button class="toolbtn" id="prev" type="button" disabled>Previous</button>
+            <span id="pageLabel" aria-live="polite" aria-atomic="true">Page 1</span>
+            <button class="toolbtn" id="next" type="button" disabled>Next</button>
+          </nav>
         </div>
       </section>
 
