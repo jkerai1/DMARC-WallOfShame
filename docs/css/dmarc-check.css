@@ -14,19 +14,24 @@
   --pill-mute: #6a994eff;
 }
 [data-theme="light"] {
-  --bg: #f4f3ee;
-  --bg2: #eae8df;
-  --line: #c8c5b6;
-  --ink: #1c1d18;
-  --ink-mute: #66695a;
-  --accent: #2a6f1a;
-  --shame: #b32619;
-  --warn: #8a6a14;
-  --good: #2a6f1a;
-  --pill-bg: #ffffff;
-  --pill-line: #e5e3dc;
-  --pill-ink: #15161a;
-  --pill-mute: #6c6f73;
+  color-scheme: light;
+  --bg: #eeede9;
+  --bg2: #f7f6f3;
+  --line: #d5d5d0;
+  --ink: #353a40;
+  --ink-mute: #626870;
+  --accent: #3d6c54;
+  --shame: #a34440;
+  --warn: #795c20;
+  --good: #3d6c54;
+  --pill-bg: #faf9f6;
+  --pill-line: #d5d5d0;
+  --pill-ink: #353a40;
+  --pill-mute: #626870;
+  --control-line: #7c807c;
+  --selected-bg: #e4ebe5;
+  --bad-bg: #f1e3e0;
+  --warn-bg: #eee7d8;
 }
 * {
   box-sizing: border-box;
@@ -56,20 +61,6 @@ body {
   border: 0;
 }
 .scan {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.012) 0,
-    rgba(255, 255, 255, 0.012) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  mix-blend-mode: overlay;
-}
-[data-theme="light"] .scan {
   display: none;
 }
 
@@ -100,13 +91,6 @@ body {
   height: 8px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 10px var(--accent);
-  animation: blink 1.4s infinite;
-}
-@keyframes blink {
-  50% {
-    opacity: 0.35;
-  }
 }
 .path {
   color: var(--ink-mute);
@@ -155,8 +139,8 @@ body {
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
-[data-theme="light"] .term-window {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+[data-theme] .term-window {
+  box-shadow: 0 2px 8px rgba(48, 53, 47, 0.06);
 }
 
 .term-chrome {
@@ -168,7 +152,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 [data-theme="light"] .term-chrome {
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--bg);
 }
 .tlight {
   width: 11px;
@@ -220,7 +204,6 @@ body {
   content: "▍";
   color: var(--accent);
   margin-left: 2px;
-  animation: blink 1s infinite;
 }
 
 .check-form {
@@ -435,4 +418,83 @@ body {
   .check-form .dollar {
     display: none;
   }
+}
+
+/* Readable text and quiet controls in both themes. */
+body[data-theme] {
+  font-size: 14px;
+  line-height: 1.65;
+}
+[data-theme] .dot {
+  animation: none;
+  box-shadow: none;
+}
+[data-theme] :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+[data-theme] .cursor::after {
+  animation: none;
+}
+[data-theme] .verdict p,
+[data-theme] .help {
+  font-size: 14px;
+  line-height: 1.65;
+}
+[data-theme] .record-box {
+  font-size: 13px;
+  border-style: solid;
+}
+[data-theme] .record-box .lab,
+[data-theme] .tag,
+[data-theme] .quick .chip {
+  font-size: 12px;
+}
+[data-theme] .check-form input {
+  min-width: 0;
+}
+[data-theme="light"] .check-form input {
+  background: var(--pill-bg);
+  border-color: var(--control-line);
+}
+[data-theme="light"] input::placeholder {
+  color: var(--ink-mute);
+  opacity: 1;
+}
+[data-theme] .tag {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+[data-theme="light"] .tag.ok {
+  background: var(--selected-bg);
+  border-color: transparent;
+}
+[data-theme="light"] .tag.bad {
+  background: var(--bad-bg);
+  border-color: transparent;
+}
+[data-theme="light"] .tlight.r {
+  background: var(--shame);
+}
+[data-theme="light"] .tlight.y {
+  background: var(--warn);
+}
+[data-theme="light"] .tlight.g {
+  background: var(--good);
+}
+[data-theme] .help {
+  border-top-style: solid;
+}
+[data-theme] .check-form button:hover {
+  filter: brightness(0.95);
+}
+
+[data-theme] .verdict p,
+[data-theme] .help {
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.help code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
 }
